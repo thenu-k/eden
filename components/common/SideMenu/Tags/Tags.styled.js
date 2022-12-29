@@ -15,7 +15,8 @@ export const TagsContainer = styled.div`
                 border-radius: 3px;
                 color: white;
                 box-sizing: border-box;
-                background-color: gray;
+                background-color: #4c4c4c;
+                cursor: pointer;
             }
         }
     }
