@@ -1,10 +1,11 @@
 import * as S from './SideMenu.styled'
+import Tags from './Tags/Tags';
 
 const SideMenu = () => {
     return (
         <S.SideMenuContainer>
-            <div className="tags">
-                
+            <div className="tags outer center">
+                <Tags/>
             </div>
         </S.SideMenuContainer>
     );
