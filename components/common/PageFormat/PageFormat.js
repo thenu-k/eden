@@ -3,7 +3,9 @@ import * as S from './PageFormat.styled'
 const PageFormat = ({children}) => {
     return (
         <S.PageFormatContainer>
-            {children}
+            <div className="pageFormatInner center">
+                {children}
+            </div>
         </S.PageFormatContainer>
     );
 }
