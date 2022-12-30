@@ -5,7 +5,7 @@ import AuthModal from '../../common/AuthModal/AuthModal';
 const Register = () => {
     return (
         <S.RegisterContainer id='Register' className='center'>
-            <AuthModal/>
+            <AuthModal type={'register'}/>
         </S.RegisterContainer>
     );
 }
