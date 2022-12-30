@@ -47,6 +47,14 @@ export const HomeContainer = styled.div`
                     }
                 }
             }
+            & .intro.outer{
+                width: 100%;
+                & p{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.3em;
+                }
+            }
         }
     }
 `
