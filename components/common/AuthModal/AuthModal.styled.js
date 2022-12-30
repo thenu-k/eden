@@ -46,10 +46,10 @@ export const AuthModalContainer = styled.div`
             }
             & .mainform{
                 width: 80%;
-                padding: 20px 0;
+                padding: 40px 0 20px 0;
                 display: flex; flex-direction: column; align-items: center;
                 & .outer{
-                    &.email{
+                    &.email, &.username{
                         margin-bottom: 20px;
                     }
                     width: 100%;

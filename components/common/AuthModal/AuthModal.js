@@ -5,12 +5,12 @@ const AuthModal = ({type}) => {
     var  OutputPackage;
     if(type==='register'){
         OutputPackage = {
-            title: 'Register', desc: 'Create an account and start fixing'
+            title: 'Register', desc: 'Create An Account and Start Fixing'
         }
     }
     if(type==='login'){
         OutputPackage = {
-            title: 'Login', desc: 'Get back to where you left'
+            title: 'Login', desc: 'Get Back to Where You Left'
         }
     }
     return (
@@ -27,6 +27,16 @@ const AuthModal = ({type}) => {
                         <button type='button' className='microsoft box-shadow-01'><FaMicrosoft size={45}/></button>
                     </div>
                     <div className="mainform">
+                        {
+                            (type==='register')
+                                ? (
+                                    <div className="username outer">
+                                        <label htmlFor="usernameInput">Username</label>
+                                        <input type="text" placeholder='Username' id='usernameInput'/>
+                                    </div>
+                                )
+                                : null
+                        }
                         <div className="email outer">
                             <label htmlFor="emailInput">Email</label>
                             <input type="text" placeholder='Email' id='emailInput'/>
