@@ -8,9 +8,10 @@ export const AuthModalContainer = styled.div`
         width: 500px;
         & .text{
             width: 100%;
-            padding: 20px 0 20px 0;
+            padding: 20px 0 25px 0;
             display: flex; flex-direction: column; align-items: center;
             & h1{
+                letter-spacing: 1px;
                 font-size: 1.5em;
                 margin-bottom: 10px;
                 font-weight: 700;
@@ -41,7 +42,7 @@ export const AuthModalContainer = styled.div`
             }
             & .mainform{
                 width: 80%;
-                padding: 40px 0 20px 0;
+                padding: 20px 0 20px 0;
                 display: flex; flex-direction: column; align-items: center;
                 & .outer{
                     &.email, &.username, &.errorMessage{

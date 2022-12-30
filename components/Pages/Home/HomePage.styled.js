@@ -33,7 +33,8 @@ export const HomeContainer = styled.div`
                     color: white;
                     padding: 20px 0;
                     border-radius: 10px;
-                    font-size: 1.5em;
+                    font-size: 1.2em;
+                    font-weight: 500;
                     background: linear-gradient(45deg, purple, blue);
                     margin: 0 20px;
                     &.none{
@@ -59,7 +60,7 @@ export const HomeContainer = styled.div`
         }
         
         & .test{
-            margin: 20px 0 60px 0;;
+            margin: 40px 0 60px 0;;
             width: 80%; height: 400px;
             background-color: white;
             border-radius: 20px;
