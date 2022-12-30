@@ -30,8 +30,9 @@ export const HomeContainer = styled.div`
                 margin: 40px 0;
                 display: flex; flex-direction: row; justify-content: center;
                 & a{
+                    width: 200px;
                     color: white;
-                    padding: 20px 25px;
+                    padding: 20px 0;
                     border-radius: 10px;
                     font-size: 1.5em;
                     background: linear-gradient(45deg, purple, blue);

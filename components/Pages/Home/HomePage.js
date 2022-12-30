@@ -10,8 +10,8 @@ const HomePage = () => {
                         I've Got <p>No Idea</p><br/>What To Write Here.
                     </h2>
                     <ul className="links outer">
-                        <Link href='/dashboard'  className=''>Dashboard</Link>
-                        <Link href='/dashboard' className='none '>Learn More</Link>
+                        <Link href='/dashboard'  className='center'>Dashboard</Link>
+                        <Link href='http://github.com/thenu-k/eden' className='none center' target={'_blank'}>Github</Link>
                     </ul>
                     <div className="intro outer">
                         <p>
