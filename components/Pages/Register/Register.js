@@ -8,6 +8,9 @@ const Register = () => {
                     <h1>Register</h1>
                     <p>Create an account and start a'fixin</p>
                 </div>
+                <form action="" className='box-shadow-00'>
+
+                </form>
             </div>
         </S.RegisterContainer>
     );

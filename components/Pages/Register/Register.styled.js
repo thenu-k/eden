@@ -6,7 +6,7 @@ export const RegisterContainer = styled.div`
         width: 500px;
         & .text{
             width: 100%;
-            padding: 40px 0;
+            padding: 20px 0;
             display: flex; flex-direction: column; align-items: center;
             & h1{
                 font-size: 1.7em;
@@ -14,5 +14,11 @@ export const RegisterContainer = styled.div`
                 font-weight: 600;
             }
         }
+        & form{
+                width: 100%;
+                height: 300px;
+                background-color: white;
+                border-radius: 20px;
+            }
     }
 `
