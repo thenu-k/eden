@@ -27,6 +27,6 @@ export const loginGoogle = async () => {
     try{
         await signInWithRedirect(auth, provider);
     }catch (e){
-        console.log('Google auth error')
+        console.log(e)
     }
 }
