@@ -16,7 +16,6 @@ export const AuthContextWrapper = ({children}) => {
     useEffect(()=> {
         // Unsubscribe is a function that must be used on clean up
         const unsubscribe = onAuthStateChanged(auth, (userNew) => {
-            console.log(userNew)
             if(userNew!=null){
                 setUser({
                     uid: userNew.email,
@@ -31,11 +30,11 @@ export const AuthContextWrapper = ({children}) => {
         })
         return () => unsubscribe()
     }, [])
+    
     return (
         <AuthContext.Provider value={{user}}>
             {
                 (loading)
-                // Display splash screen here instead
                 ? (<SplashScreen/>)
                 : (children)
             }

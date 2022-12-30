@@ -38,5 +38,6 @@ export default function App({ Component, pageProps }) {
   can instead redirect the user to desired page. Once  the page loads, the auth wrapper element
   will check and set the user for us.
 
-  Setting the logout function inside the authwrapper seems to always set the user to null
+  Setting the logout function inside the authwrapper seems to always set the user to null. 
+  The above bug was squashed by intializing the auth variable inside the sign out function
 */
