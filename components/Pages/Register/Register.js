@@ -1,17 +1,11 @@
 import * as S from './Register.styled'
+import { FaGoogle } from "react-icons/fa";
+import AuthModal from '../../common/AuthModal/AuthModal';
 
 const Register = () => {
     return (
         <S.RegisterContainer id='Register' className='center'>
-            <div className="register inner">
-                <div className="text">
-                    <h1>Register</h1>
-                    <p>Create an account and start a'fixin</p>
-                </div>
-                <form action="" className='box-shadow-00'>
-
-                </form>
-            </div>
+            <AuthModal/>
         </S.RegisterContainer>
     );
 }
