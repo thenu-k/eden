@@ -3,12 +3,16 @@ import { AuthContextWrapper } from '../components/auth/authContext'
 import RouteProtector from '../components/auth/RouteProtector'
 import PageFormat from '../components/common/PageFormat/PageFormat'
 import '../components/global.css'
+import Router from 'next/router';
+import NextNProgress from 'nextjs-progressbar';
 
 export default function App({ Component, pageProps }) {
   const protectedRoutes = ['/dashboard']
   const router = useRouter()
   return(
-  <AuthContextWrapper>   
+  <AuthContextWrapper>  
+    {/* Progess bar */}
+  <NextNProgress color="#ba00f2" startPosition={0.3} stopDelayMs={200} height={5} showOnShallow={true} />
     <PageFormat> 
       {
         (protectedRoutes.includes(router.pathname))
