@@ -21,6 +21,19 @@ const AuthModal = ({type}) => {
                         <button type='button' className='apple box-shadow-01'><FaApple size={45}/></button>
                         <button type='button' className='microsoft box-shadow-01'><FaMicrosoft size={45}/></button>
                     </div>
+                    <div className="mainform">
+                        <div className="email outer">
+                            <label htmlFor="emailInput">Email</label>
+                            <input type="text" placeholder='Email' id='emailInput'/>
+                        </div>
+                        <div className="password outer">
+                            <label htmlFor="passwordInput">Password</label>
+                            <input type="text" placeholder='Password' id='passwordInput'/>
+                        </div>
+                        <div className="submit">
+                            <button type="submit" className='center box-shadow-01'>Submit</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </S.AuthModalContainer>
