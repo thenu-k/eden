@@ -58,7 +58,7 @@ const AuthModal = ({type}) => {
                     <h1>{OutputPackage.title}</h1>
                     <p>{OutputPackage.desc}</p>
                 </div>
-                <form className='box-shadow-00' onSubmit={(e) => handleSubmit(e)}>
+                <form className='box-shadow-02' onSubmit={(e) => handleSubmit(e)}>
                     <div className="alt">
                         <button onClick={handleGoogleSubmit} type='button' className='google box-shadow-01'><FaGoogle size={45}/></button>
                         <button type='button' className='apple box-shadow-01'><FaApple size={45}/></button>

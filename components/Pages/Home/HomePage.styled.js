@@ -57,5 +57,12 @@ export const HomeContainer = styled.div`
                 }
             }
         }
+        
+        & .test{
+            margin: 20px 0 60px 0;;
+            width: 80%; height: 400px;
+            background-color: white;
+            border-radius: 20px;
+        }
     }
 `

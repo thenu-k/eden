@@ -19,6 +19,9 @@ const HomePage = () => {
                         <Link href='http://github.com/thenu-k/eden' className='none center' target={'_blank'}>Github</Link>
                     </ul>
                 </div>
+                <div className="test box-shadow-02">
+
+                </div>
             </div>
         </S.HomeContainer>
     );
