@@ -9,14 +9,18 @@ const RouteProtector = ({children}) => {
     // A use effect is used as we need the component to re-render evry time the router/user changes
     useEffect(() => {
         if(user===null){
-            router.push('/login')
+            setTimeout(()=>{
+                router.push('/login')
+            }, 500)
         }
     }, [router, user])
     return (
         <>
             {   
                 // There's a null here, as the route checker is within a useEffect, there's a chance for the component to mount
-                (user===null) ? null : children
+                (user===null) 
+                ? (<>Checking Permissions</>) 
+                : children
             }
         </>
     );
