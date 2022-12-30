@@ -16,7 +16,7 @@ const RouteProtector = ({children}) => {
         <>
             {
                 (user===null) ? (
-                    <>Loading</>
+                    <>Loading Protected</>
                 ) : children
             }
         </>

@@ -29,7 +29,8 @@ export const AuthContextWrapper = ({children}) => {
         <AuthContext.Provider value={{user}}>
             {
                 (loading)
-                ? (<>Loading</>)
+                // Display splash screen here instead
+                ? (<>Loading AuthWrapper</>)
                 : (children)
             }
         </AuthContext.Provider>
