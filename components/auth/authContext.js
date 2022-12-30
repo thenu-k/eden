@@ -16,7 +16,6 @@ export const AuthContextWrapper = ({children}) => {
         // Unsubscribe is a function that must be used on clean up
         const unsubscribe = onAuthStateChanged(auth, (userNew) => {
             if(userNew!=null){
-                console.log(userNew)
                 setUser({
                     uid: userNew.email,
                 })

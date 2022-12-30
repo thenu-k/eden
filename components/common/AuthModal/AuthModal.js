@@ -1,8 +1,9 @@
 import * as S from './AuthModal.styled'
 import { FaGoogle, FaApple, FaMicrosoft } from "react-icons/fa";
 import { useRef } from 'react';
-import { registerUser, loginUser } from './AuthFunctions';
+import { registerUser, loginUser, loginGoogle } from './AuthFunctions';
 import { useRouter } from 'next/router';
+import { getAuth, getRedirectResult } from 'firebase/auth';
 
 
 const AuthModal = ({type}) => {
@@ -32,6 +33,17 @@ const AuthModal = ({type}) => {
             router.push('/')
         }
     }
+    const handleGoogleSubmit = async(e) => {
+        await loginGoogle()
+    }
+    //Redirection check
+    const auth = getAuth();
+    getRedirectResult(auth)
+    .then((result) => {
+        router.push('/')
+    }).catch((error) => {
+        console.log(error.message)
+    });
     return (
         <S.AuthModalContainer id='AuthModal' className='center'>
             <div className="authmodal inner">
@@ -41,7 +53,7 @@ const AuthModal = ({type}) => {
                 </div>
                 <form className='box-shadow-00' onSubmit={(e) => handleSubmit(e)}>
                     <div className="alt">
-                        <button type='button' className='google box-shadow-01'><FaGoogle size={45}/></button>
+                        <button onClick={handleGoogleSubmit} type='button' className='google box-shadow-01'><FaGoogle size={45}/></button>
                         <button type='button' className='apple box-shadow-01'><FaApple size={45}/></button>
                         <button type='button' className='microsoft box-shadow-01'><FaMicrosoft size={45}/></button>
                     </div>
