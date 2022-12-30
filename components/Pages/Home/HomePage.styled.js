@@ -6,7 +6,7 @@ export const HomeContainer = styled.div`
         width: 90%;
         display: flex; align-items: center;  flex-direction: column;
         & .text{
-            margin-top: 75px;
+            margin: 75px 0;
             width: 50%;
             display: flex; flex-direction: column; align-items: center;
             & h2{
@@ -27,7 +27,6 @@ export const HomeContainer = styled.div`
             }
             & .links.outer{
                 width: 100%;
-                margin: 40px 0;
                 display: flex; flex-direction: row; justify-content: center;
                 & a{
                     width: 200px;
@@ -49,6 +48,7 @@ export const HomeContainer = styled.div`
                 }
             }
             & .intro.outer{
+                margin: 40px 0;
                 width: 100%;
                 & p{
                     width: 100%;
