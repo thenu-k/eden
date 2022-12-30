@@ -2,17 +2,13 @@ import styled from "styled-components";
 
 export const AuthModalContainer = styled.div`
     width: 100%;
-    & *:focus{
-        outline: 0;
-        outline: 2px solid blue;
-    }
     /* Remove this  */
     margin-bottom: 100px;
     & .inner.authmodal{
         width: 500px;
         & .text{
             width: 100%;
-            padding: 20px 0 40px 0;
+            padding: 20px 0 20px 0;
             display: flex; flex-direction: column; align-items: center;
             & h1{
                 font-size: 1.5em;
@@ -48,8 +44,12 @@ export const AuthModalContainer = styled.div`
                 padding: 40px 0 20px 0;
                 display: flex; flex-direction: column; align-items: center;
                 & .outer{
-                    &.email, &.username{
+                    &.email, &.username, &.errorMessage{
                         margin-bottom: 20px;
+                    }
+                    &.errorMessage{
+                        color: red;
+                        font-weight: 500;
                     }
                     width: 100%;
                     display: flex; align-items: center; flex-direction: column;
@@ -73,6 +73,10 @@ export const AuthModalContainer = styled.div`
                         color: white;
                         width: 100%;
                         padding: 20px 0px;
+                        cursor: pointer;
+                        &:hover{
+                            opacity: 0.9;
+                        }
                     }
                 }
             }

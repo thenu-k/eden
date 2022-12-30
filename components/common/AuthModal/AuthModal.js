@@ -1,22 +1,23 @@
 import * as S from './AuthModal.styled'
 import { FaGoogle, FaApple, FaMicrosoft } from "react-icons/fa";
-import { useRef } from 'react';
-import { registerUser, loginUser, loginGoogle } from './AuthFunctions';
+import { useRef, useState } from 'react';
+import { loginGoogle } from './AuthFunctions';
 import { useRouter } from 'next/router';
-import { getAuth, getRedirectResult } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, getRedirectResult, signInWithEmailAndPassword } from 'firebase/auth';
 
 
 const AuthModal = ({type}) => {
     const router = useRouter()
     var  OutputPackage;
+    const [errorMessage, setErrorMessage] = useState(null)
     if(type==='register'){
         OutputPackage = {
-            title: 'Register', desc: 'Create an Account and Start Fixing'
+            title: 'REGISTER', desc: 'Create an Account and Get Started'
         }
     }
     if(type==='login'){
         OutputPackage = {
-            title: 'Login', desc: 'Get Back to Where You Left'
+            title: 'LOGIN', desc: 'Continue Where You Left Off'
         }
     }
     const emailInputRef = useRef()
@@ -24,14 +25,28 @@ const AuthModal = ({type}) => {
     const usernameInputRef = useRef()
     const handleSubmit = async(e) => {
         e.preventDefault()
+        const email = emailInputRef.current.value
+        const password = passwordInputRef.current.value
         if (type==='register' ){
-            await registerUser(usernameInputRef.current.value, emailInputRef.current.value, passwordInputRef.current.value)
-            router.push('/dashboard')
+            const username = usernameInputRef.current.value
+            const auth = getAuth();
+            try{
+                //Looks like we don't need to send the firebase config file 
+                await createUserWithEmailAndPassword(auth, email, password, username)
+                router.push('/dashboard')
+            } catch (err){
+                setErrorMessage(err.message)
+            }
         }
         else{
-            await loginUser(emailInputRef.current.value, passwordInputRef.current.value)
-            router.push('/dashboard')
-        }
+            const auth = getAuth();
+            try{
+                await signInWithEmailAndPassword(auth, email, password)
+                router.push('/dashboard')
+            } catch (err){
+                setErrorMessage(err.message)
+            }
+        }   
     }
     const handleGoogleSubmit = async(e) => {
         await loginGoogle()
@@ -50,6 +65,11 @@ const AuthModal = ({type}) => {
                         <button type='button' className='microsoft box-shadow-01'><FaMicrosoft size={45}/></button>
                     </div>
                     <div className="mainform">
+                        {
+                            (errorMessage!=null)
+                                ?  <p className='errorMessage outer'>{errorMessage}</p>
+                                : null
+                        }
                         {
                             (type==='register')
                                 ? (
