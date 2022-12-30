@@ -11,7 +11,7 @@ const AuthModal = ({type}) => {
     var  OutputPackage;
     if(type==='register'){
         OutputPackage = {
-            title: 'Register', desc: 'Create An Account and Start Fixing'
+            title: 'Register', desc: 'Create an Account and Start Fixing'
         }
     }
     if(type==='login'){
@@ -26,11 +26,11 @@ const AuthModal = ({type}) => {
         e.preventDefault()
         if (type==='register' ){
             await registerUser(usernameInputRef.current.value, emailInputRef.current.value, passwordInputRef.current.value)
-            router.push('/')
+            router.push('/dashboard')
         }
         else{
             await loginUser(emailInputRef.current.value, passwordInputRef.current.value)
-            router.push('/')
+            router.push('/dashboard')
         }
     }
     const handleGoogleSubmit = async(e) => {

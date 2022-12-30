@@ -5,7 +5,7 @@ import PageFormat from '../components/common/PageFormat/PageFormat'
 import '../components/global.css'
 
 export default function App({ Component, pageProps }) {
-  const protectedRoutes = ['/']
+  const protectedRoutes = ['/dashboard']
   const router = useRouter()
   return(
   <AuthContextWrapper>   

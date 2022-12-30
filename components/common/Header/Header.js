@@ -7,7 +7,8 @@ const Header = () => {
     return (
         <S.HeaderContainer className='box-shadow-00' id='Header'>
             <nav>
-                <Link href='/'>Dashboard</Link>
+                <Link href='/'>Home</Link>
+                <Link href='/dashboard'>Dashboard</Link>
                 <Link href='/login'>Login</Link>
                 <Link href='/register'>Register</Link>
                 <button onClick={null}>Logout</button>
