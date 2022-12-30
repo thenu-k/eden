@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import {onAuthStateChanged} from 'firebase/auth'
 import { auth } from "../../firebase/firebase";
+import SplashScreen from "../common/SplashScreen/SplashScreen";
 
 // The curly bracket content does not appear to affect the user value
 const AuthContext = createContext({})
@@ -33,7 +34,7 @@ export const AuthContextWrapper = ({children}) => {
             {
                 (loading)
                 // Display splash screen here instead
-                ? (<>Loading AuthWrapper</>)
+                ? (<SplashScreen/>)
                 : (children)
             }
         </AuthContext.Provider>
