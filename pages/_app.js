@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
   return(
   <AuthContextWrapper>  
     {/* Progess bar */}
-  <NextNProgress color="#ba00f2" startPosition={0.3} stopDelayMs={200} height={5} showOnShallow={true} />
+  <NextNProgress color="#ba00f2" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true} />
     <PageFormat> 
       {
         (protectedRoutes.includes(router.pathname))
