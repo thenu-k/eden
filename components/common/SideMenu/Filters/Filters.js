@@ -2,7 +2,7 @@ import * as S from './Filters.styled'
 
 const Filters = () => {
     return (
-        <S.FiltersContainer>
+        <S.FiltersContainer id='Filters'>
             <div className="filters inner">
                 <select name="Order By" id=""className='center' >
                     <option value="" disabled selected>Date Filter</option>

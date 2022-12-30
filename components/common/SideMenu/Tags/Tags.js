@@ -2,7 +2,7 @@ import * as S from './Tags.styled'
 
 const Tags = () => {
     return (
-        <S.TagsContainer>
+        <S.TagsContainer id='Tags'>
             <ul>
                 <li><button>Resolved</button></li>
                 <li><button>Unresolved</button></li>
