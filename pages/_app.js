@@ -8,8 +8,8 @@ export default function App({ Component, pageProps }) {
   const protectedRoutes = ['/']
   const router = useRouter()
   return(
-  <PageFormat> 
-    <AuthContextWrapper>   
+  <AuthContextWrapper>   
+    <PageFormat> 
       {
         (protectedRoutes.includes(router.pathname))
           ? (
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }) {
             <Component {...pageProps} />
           )
       }
-    </AuthContextWrapper>
-  </PageFormat>
+    </PageFormat>
+  </AuthContextWrapper>
   )
 }
