@@ -8,6 +8,11 @@ const AuthModal = ({type}) => {
             title: 'Register', desc: 'Create an account and start fixing'
         }
     }
+    if(type==='login'){
+        OutputPackage = {
+            title: 'Login', desc: 'Get back to where you left'
+        }
+    }
     return (
         <S.AuthModalContainer id='AuthModal' className='center'>
             <div className="authmodal inner">

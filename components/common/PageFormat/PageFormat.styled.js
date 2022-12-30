@@ -9,6 +9,7 @@ export const PageFormatContainer = styled.div`
     }
     & .pageFormatInner {
         margin-top: 60px;
+        padding-top: 10px;
         width: 100%;
     }
 `
