@@ -29,10 +29,9 @@ export const AuthModalContainer = styled.div`
             border-radius: 20px;
             display: flex; align-items: center; flex-direction: column;
             & .alt{
-                padding: 40px 0 40px 0;
+                padding: 40px 0 0px 0;
                 width: 80%;
                 display: flex; justify-content: space-evenly;
-                border-bottom: 2px solid #e2e2e2;
                 & button{
                     border-radius: 5px; 
                     padding: 20px 25px;
