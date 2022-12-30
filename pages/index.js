@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import PageFormat from '../components/common/PageFormat/PageFormat'
-import Eden from '../components/Pages/Eden/Eden'
+import  HomePage from '../components/Pages/Home/HomePage'
 
 export default function Home() {
   return (
@@ -11,7 +10,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      Home
+      <HomePage/>
     </>
   )
 }
