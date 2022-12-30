@@ -37,4 +37,6 @@ export default function App({ Component, pageProps }) {
   Once the user logs in and is authenticated, we don't need to manually set the user - we 
   can instead redirect the user to desired page. Once  the page loads, the auth wrapper element
   will check and set the user for us.
+
+  Setting the logout function inside the authwrapper seems to always set the user to null
 */

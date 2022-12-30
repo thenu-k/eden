@@ -36,14 +36,6 @@ const AuthModal = ({type}) => {
     const handleGoogleSubmit = async(e) => {
         await loginGoogle()
     }
-    //Redirection check
-    const auth = getAuth();
-    getRedirectResult(auth)
-    .then((result) => {
-        router.push('/')
-    }).catch((error) => {
-        console.log(error.message)
-    });
     return (
         <S.AuthModalContainer id='AuthModal' className='center'>
             <div className="authmodal inner">

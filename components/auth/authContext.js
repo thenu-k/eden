@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import {onAuthStateChanged} from 'firebase/auth'
 import { auth } from "../../firebase/firebase";
 import SplashScreen from "../common/SplashScreen/SplashScreen";
+import {getAuth, signOut} from 'firebase/auth'
 
 // The curly bracket content does not appear to affect the user value
 const AuthContext = createContext({})
@@ -15,6 +16,7 @@ export const AuthContextWrapper = ({children}) => {
     useEffect(()=> {
         // Unsubscribe is a function that must be used on clean up
         const unsubscribe = onAuthStateChanged(auth, (userNew) => {
+            console.log(userNew)
             if(userNew!=null){
                 setUser({
                     uid: userNew.email,
