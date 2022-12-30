@@ -1,0 +1,18 @@
+import styled from "styled-components";
+
+export const RegisterContainer = styled.div`
+    width: 100%;
+    & .inner.register{
+        width: 500px;
+        & .text{
+            width: 100%;
+            padding: 40px 0;
+            display: flex; flex-direction: column; align-items: center;
+            & h1{
+                font-size: 1.7em;
+                margin-bottom: 10px;
+                font-weight: 600;
+            }
+        }
+    }
+`
