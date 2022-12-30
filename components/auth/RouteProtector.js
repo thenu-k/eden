@@ -14,10 +14,9 @@ const RouteProtector = ({children}) => {
     }, [router, user])
     return (
         <>
-            {
-                (user===null) ? (
-                    <>Loading Protected</>
-                ) : children
+            {   
+                // There's a null here, as the route checker is within a useEffect, there's a chance for the component to mount
+                (user===null) ? null : children
             }
         </>
     );

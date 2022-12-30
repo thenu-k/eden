@@ -25,3 +25,11 @@ export default function App({ Component, pageProps }) {
   </AuthContextWrapper>
   )
 }
+
+/* Auth Summary
+  The auth wrapper checks the users cookies to see whether they are loaded. If they are
+  the global context 'user' will be not null. While this process occurs, a splash screen will
+  be displayed. 
+  The route protecter checks whether the current url is protected and then redirects the user to the login
+  page if necessary. The checking mechanism is within a useEffect so there's a loading component.
+*/
