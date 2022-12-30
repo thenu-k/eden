@@ -16,7 +16,7 @@ export const AuthContextWrapper = ({children}) => {
         const unsubscribe = onAuthStateChanged(auth, (userNew) => {
             if(userNew!=null){
                 setUser({
-                    uid: user.uid,
+                    uid: user.email,
                 })
             }else{
                 setUser(null)
