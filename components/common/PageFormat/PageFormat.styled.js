@@ -4,8 +4,11 @@ export const PageFormatContainer = styled.div`
     width: 100%;
     min-height: 100vh;
     background-color: #F8F9FF;
+    & #Header{
+        position: fixed; top: 0; left: 0; z-index: 9999;
+    }
     & .pageFormatInner {
-        margin-top: 20px;
+        margin-top: 60px;
         width: 100%;
     }
 `

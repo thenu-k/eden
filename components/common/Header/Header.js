@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Header = () => {
     return (
-        <S.HeaderContainer className='box-shadow-00'>
+        <S.HeaderContainer className='box-shadow-00' id='Header'>
             <nav>
                 <Link href='/'>Dashboard</Link>
                 <Link href='/login'>Login</Link>
