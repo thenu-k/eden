@@ -1,8 +1,12 @@
 import * as S from './AuthModal.styled'
 import { FaGoogle, FaApple, FaMicrosoft } from "react-icons/fa";
 import { useRef } from 'react';
+import { registerUser, loginUser } from './AuthFunctions';
+import { useRouter } from 'next/router';
+
 
 const AuthModal = ({type}) => {
+    const router = useRouter()
     var  OutputPackage;
     if(type==='register'){
         OutputPackage = {
@@ -17,20 +21,16 @@ const AuthModal = ({type}) => {
     const emailInputRef = useRef()
     const passwordInputRef = useRef()
     const usernameInputRef = useRef()
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault()
         if (type==='register' ){
-            registerUser(usernameInputRef.current.value, emailInputRef.current.value, passwordInputRef.current.value)
+            await registerUser(usernameInputRef.current.value, emailInputRef.current.value, passwordInputRef.current.value)
+            router.push('/')
         }
         else{
-            loginUser(emailInputRef.current.value, passwordInputRef.current.value)
+            await loginUser(emailInputRef.current.value, passwordInputRef.current.value)
+            router.push('/')
         }
-    }
-    const registerUser = (username, email, password) => {
-        console.log(username, email, password)
-    }
-    const loginUser = (email, password) => {
-        console.log(email, password)
     }
     return (
         <S.AuthModalContainer id='AuthModal' className='center'>
