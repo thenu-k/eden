@@ -5,6 +5,14 @@ import { useAuth } from '../../auth/authContext';
 
 const Header = () => {
     const {user} = useAuth()
+    const auth = getAuth()
+    const logOut = async() => {
+        signOut(auth).then(res=>{
+            console.log(res)
+        }).catch(err=>{
+            console.log
+        })
+    }
     return (
         <S.HeaderContainer className='box-shadow-02 center' id='Header'>
             <div className="header inner">
@@ -14,7 +22,7 @@ const Header = () => {
                         <li><Link href='/dashboard/dashboard'>Dashboard</Link></li>
                         {
                             (user!=null)
-                                ?   <li><button>Sign Out</button></li>
+                                ?   <li><button onClick={logOut}>Sign Out</button></li>
                                 :   <><li><Link href='/login'>Login</Link></li><li><Link href='/register'>Register</Link></li></>
                         }
                     </ul>
