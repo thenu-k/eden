@@ -57,7 +57,7 @@ export const MenuBarContainer = styled.div`
             & .inner{
                 opacity: 1;
                 animation-name: appearIn;
-                animation-duration: 500ms; animation-fill-mode: forwards; animation-iteration-count: 1;
+                animation-duration: 250ms; animation-fill-mode: forwards; animation-iteration-count: 1;
                 animation-timing-function: ease-out;
             }
         }
@@ -72,11 +72,11 @@ export const MenuBarContainer = styled.div`
         @keyframes appearIn {
             from{
                 opacity: 0;
-                transform: translateX(calc(-100%));
+                transform: translateY(calc(100%));
             }
             to{
                 opacity: 1;
-                transform: translateX(0);
+                transform: translateY(0);
             }
         }
         & .inner{

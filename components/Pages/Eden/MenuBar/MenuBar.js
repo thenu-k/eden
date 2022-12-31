@@ -8,6 +8,11 @@ const MenuBar = () => {
             modalRef.current.classList.add('on')
         }
     }
+    const handleModalClick = (e) => {
+        if(e.target.querySelector('.modal.inner')!=null){
+            modalRef.current.classList.remove('on')
+        }
+    }
     return (
         <S.MenuBarContainer className='center box-shadow-02' id='MenuBar'>
             <div className="menubar inner">
@@ -18,8 +23,8 @@ const MenuBar = () => {
                     <button type='button' onClick={turnModalOn}>Create</button>
                 </div>
             </div>
-            <div id="createModal" className='center' ref={modalRef}>
-                <div className="inner box-shadow-02">
+            <div id="createModal" className='center' ref={modalRef} onClick={handleModalClick}>
+                <div className="inner box-shadow-02 modal">
 
                 </div>
             </div>
