@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MenuBarContainer = styled.div`
     width: 85%;
     position: fixed;
-    z-index: 999;
+    z-index: 99;
     top: 80px;
     background-color: white;
     border-radius: 10px;
@@ -38,6 +38,53 @@ export const MenuBarContainer = styled.div`
                 font-weight: 500;
                 cursor: pointer;
             }
+        }
+    }
+    & #createModal{
+        display: none;
+        backdrop-filter: blur(0px);
+        /* transition: backdrop-filter 5s ease-in-out; */
+        position: fixed; z-index: 1000;
+        top: 0; left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: transparent;
+        &.on{
+            display: flex;
+            animation-name: blurIn;
+            animation-duration: 500ms; animation-fill-mode: forwards; animation-iteration-count: 1;
+            animation-timing-function: linear;
+            & .inner{
+                opacity: 1;
+                animation-name: appearIn;
+                animation-duration: 500ms; animation-fill-mode: forwards; animation-iteration-count: 1;
+                animation-timing-function: ease-out;
+            }
+        }
+        @keyframes blurIn {
+            from{
+                backdrop-filter: blur(0px);
+            }
+            to{
+                backdrop-filter: blur(2px);
+            }
+        }
+        @keyframes appearIn {
+            from{
+                opacity: 0;
+                transform: translateX(calc(-100%));
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        & .inner{
+            height: 500px;
+            width: 500px;
+            background-color: white;
+            border-radius: 10px;
+            transform: translateX(calc(-100%));
         }
     }
 `
