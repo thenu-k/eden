@@ -26,9 +26,9 @@ export const AuthModalContainer = styled.div`
             border-radius: 20px;
             display: flex; align-items: center; flex-direction: column;
             & .alt{
-                padding: 40px 0 0px 0;
-                width: 80%;
-                display: flex; justify-content: space-evenly;
+                padding: 60px 0 0px 0;
+                width: 75%;
+                display: flex; justify-content: space-between;
                 & button{
                     border-radius: 5px; 
                     padding: 20px 25px;
@@ -41,8 +41,8 @@ export const AuthModalContainer = styled.div`
                 }
             }
             & .mainform{
-                width: 80%;
-                padding: 20px 0 20px 0;
+                width: 75%;
+                padding: 40px 0 20px 0;
                 display: flex; flex-direction: column; align-items: center;
                 & .outer{
                     &.email, &.username, &.errorMessage{
@@ -58,7 +58,7 @@ export const AuthModalContainer = styled.div`
                         display: none;
                     }
                     & input{
-                        width: 90%;
+                        width: 100%;
                         box-sizing: border-box;
                         border-radius: 5px;
                         border: 2px solid #e2e2e2;
@@ -66,7 +66,7 @@ export const AuthModalContainer = styled.div`
                     }
                 }
                 & .submit{
-                    width: 90%;
+                    width: 100%;
                     margin: 40px 0;
                     & button{
                         background: linear-gradient(45deg, purple, blue);
