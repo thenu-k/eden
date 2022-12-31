@@ -11,10 +11,10 @@ export const EdenContainer = styled.div`
         position: relative;
         & .noteList{
             width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 15px;
+            grid-auto-columns: auto;
         }
     }
 `

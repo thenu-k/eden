@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NoteTemplateContainer = styled.div`    
-    width: 23%;
+    width: 100%;
     background-color: white;
     border-radius: 10px;
     margin-bottom: 20px;

@@ -1,5 +1,5 @@
 import { collection, getDocs, query, where } from 'firebase/firestore';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { db } from '../../../firebase/firebase';
 import { useAuth } from '../../auth/authContext';
 import * as S from './Eden.styled'
@@ -29,16 +29,19 @@ const Eden = () => {
         try{
             const rawData = await getDocs(q);
             const result = rawData.docs.map(doc => ({
-              noteID: doc.id,
-              title: doc.data().title,
-              description: doc.data().description,
+                noteID: doc.id,
+                title: doc.data().title,
+                description: doc.data().description,
             })) 
             setData(result)
         }catch(err){
             console.log(err)
         }
     }
-    getData()
+    useEffect(() => {
+        getData()
+    }, [])
+    
     return (
         <S.EdenContainer className='center' id='Eden'>
             <div className="eden inner">
