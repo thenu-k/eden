@@ -4,11 +4,13 @@ import { BsPlusSquareFill } from "react-icons/bs";
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../../../firebase/firebase';
 import { useAuth } from '../../../auth/authContext';
+import { useRouter } from 'next/router';
 
 const MenuBar = () => {
     const {user} = useAuth()
     const modalRef = useRef()
     const [error, setError] = useState(null)
+    const router = useRouter()
     const turnModalOn = () => {
         setError('')
         if(modalRef.current.classList.contains('on')===false){
@@ -35,6 +37,7 @@ const MenuBar = () => {
             setError('Submission Sent')
             setTimeout(() => {
                 modalRef.current.classList.remove('on')
+                // router.reload()
             }, 1000)
         }catch (err){
             setError(err)

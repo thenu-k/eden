@@ -29,9 +29,9 @@ export const NoteTemplateContainer = styled.div`
             & p{
                 font-size: 0.9em;
                 font-weight: 500;
-                color: gray;
+                color: black;
                 width: 90%;
-                padding: 20px 0;
+                padding: 30px 0;
             }
         }
     }
