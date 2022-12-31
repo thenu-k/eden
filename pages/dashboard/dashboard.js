@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Eden from '../components/Pages/Eden/Eden'
+import Eden from '../../components/Pages/Eden/Eden'
 
 export default function Home() {
   return (

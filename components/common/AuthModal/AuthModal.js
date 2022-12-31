@@ -33,7 +33,7 @@ const AuthModal = ({type}) => {
             try{
                 //Looks like we don't need to send the firebase config file 
                 await createUserWithEmailAndPassword(auth, email, password, username)
-                router.push('/dashboard')
+                router.push('/dashboard/dashboard')
             } catch (err){
                 setErrorMessage(err.message)
             }
@@ -42,7 +42,7 @@ const AuthModal = ({type}) => {
             const auth = getAuth();
             try{
                 await signInWithEmailAndPassword(auth, email, password)
-                router.push('/dashboard')
+                router.push('/dashboard/dashboard')
             } catch (err){
                 setErrorMessage(err.message)
             }

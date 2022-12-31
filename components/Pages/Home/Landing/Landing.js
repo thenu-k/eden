@@ -9,7 +9,7 @@ const Landing = () => {
                     <h1>All <span>Your Notes</span> <br/> In One Place</h1>
                     <p>Got an idea? Jot it down here and let it flourish. <br/> Create an account or continue as a guest.</p>
                     <div className="links center">
-                        <Link href='/dashboard' className='center colored box-shadow-02'>Dashboard</Link>
+                        <Link href='/dashboard/dashboard' className='center colored box-shadow-02'>Dashboard</Link>
                         <Link href='https://github.com/thenu-k/eden' target={'_blank'} className='center box-shadow-02'>Github</Link>
                     </div>
                 </div>
