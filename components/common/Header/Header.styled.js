@@ -9,14 +9,14 @@ export const HeaderContainer = styled.header`
         display: flex; justify-content: center; align-items: center;
     }
     & .header.inner{
-        width: 90%;
+        width: 85%;
         height: 100%;
         display: flex; flex-direction: row; align-items: center;
         & h1{
             height: 100%;
             & a{
                 height: 100%;
-                padding: 0 20px;
+                padding-right: 20px;
                 font-size: 1.5em;
                 font-weight: 700;
                 letter-spacing: 1px;

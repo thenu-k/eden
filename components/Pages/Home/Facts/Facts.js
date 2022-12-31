@@ -1,4 +1,5 @@
 import * as S from './Facts.styled'
+import {FaFingerprint,FaFilter,FaGalacticRepublic, FaRedhat, FaRenren, FaStumbleuponCircle} from 'react-icons/fa'
 
 const Facts = () => {
     return (
