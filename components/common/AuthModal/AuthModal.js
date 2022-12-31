@@ -92,11 +92,11 @@ const AuthModal = ({type}) => {
                         }
                         <div className="email outer">
                             <label htmlFor="emailInput">Email</label>
-                            <input type="text" placeholder='Email' id='emailInput' ref={emailInputRef}/>
+                            <input type="email" placeholder='Email' id='emailInput' ref={emailInputRef}/>
                         </div>
                         <div className="password outer">
                             <label htmlFor="passwordInput">Password</label>
-                            <input type="text" placeholder='Password' id='passwordInput' ref={passwordInputRef}/>
+                            <input type="password" placeholder='Password' id='passwordInput' ref={passwordInputRef}/>
                         </div>
                         <div className="submit">
                             <button type="submit" className='center box-shadow-01'>Submit</button>

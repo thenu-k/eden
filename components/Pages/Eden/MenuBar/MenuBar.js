@@ -66,8 +66,8 @@ const MenuBar = () => {
                         <h3>New Note</h3>
                     </div>
                     <form onSubmit={submitNote}>
-                        <input type="text" placeholder='Title' id='titleInput'/>
-                        <input type="text" placeholder='Description' id='descInput'/>
+                        <input type="text" placeholder='Title' id='titleInput' autoComplete='off'/>
+                        <input type="text" placeholder='Description' id='descInput' autoComplete='off'/>
                         <button className='center'>Submit</button>
                         {
                             (error)
