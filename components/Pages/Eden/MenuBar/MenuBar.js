@@ -48,7 +48,7 @@ const MenuBar = () => {
         e.target.querySelector('#descInput').value = ''
     }
     return (
-        <S.MenuBarContainer className='center box-shadow-02' id='MenuBar'>
+        <S.MenuBarContainer className='center box-shadow-01' id='MenuBar'>
             <div className="menubar inner">
                 <div className="search outer">
                     <input type="text" placeholder='Search Inventory' className='' />

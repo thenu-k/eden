@@ -1,4 +1,4 @@
-import { collection, getDocs, query, where } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { db } from '../../../firebase/firebase';
 import { useAuth } from '../../auth/authContext';
@@ -25,7 +25,7 @@ const Eden = () => {
     const {user} = useAuth()
     const getData = async() => {
         const uid = user.uid
-        const q = query(collection(db, "notes"), where('uid', "==", uid));
+        const q = query(collection(db, "notes"), where('uid', "==", uid), orderBy('created', 'desc'));
         try{
             const rawData = await getDocs(q);
             const result = rawData.docs.map(doc => ({

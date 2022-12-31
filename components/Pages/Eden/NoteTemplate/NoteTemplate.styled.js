@@ -2,36 +2,35 @@ import styled from "styled-components";
 
 export const NoteTemplateContainer = styled.div`    
     width: 100%;
-    background-color: white;
+    height: fit-content;
+    background-color: transparent;
+    align-self: flex-start;
     border-radius: 10px;
-    margin-bottom: 20px;
     & .inner.noteTemplate{
+        border-radius: 10px;
         width: 100%;
         display: flex;
         align-items: center;
         flex-direction: column;
-        padding: 40px 0;
+        padding: 20px 20px;
+        background-color: white;
+        box-sizing: border-box;
         & .com-1{
-            border-radius: 5px;
-            width: 90%;
+            width: 100%;
             height: 100%;
-            background-color: #f8f8f8;
             &:not(:last-of-type){
                 margin-bottom: 20px;
             }
+            display: flex; flex-direction: row; justify-content: flex-start;
             & h5{
-                width: 100%;
                 font-size: 1.2em;
                 font-weight: 500;
                 color: black;
-                padding: 20px 0;
             }
             & p{
                 font-size: 0.9em;
                 font-weight: 500;
                 color: black;
-                width: 90%;
-                padding: 30px 0;
             }
         }
     }

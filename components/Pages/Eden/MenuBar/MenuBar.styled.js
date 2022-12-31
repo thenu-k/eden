@@ -57,8 +57,8 @@ export const MenuBarContainer = styled.div`
             & .inner{
                 opacity: 1;
                 animation-name: appearIn;
-                animation-duration: 250ms; animation-fill-mode: forwards; animation-iteration-count: 1;
-                animation-timing-function: ease-out;
+                animation-duration: 200ms; animation-fill-mode: forwards; animation-iteration-count: 1;
+                animation-timing-function: ease-in-out;
             }
         }
         @keyframes blurIn {
