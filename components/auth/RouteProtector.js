@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import PermissionCheck from "../common/SplashScreen/PermissionCheck";
 import { useAuth } from "./authContext";
 
 
@@ -19,7 +20,7 @@ const RouteProtector = ({children}) => {
             {   
                 // There's a null here, as the route checker is within a useEffect, there's a chance for the component to mount
                 (user===null) 
-                ? (<>Checking Permissions</>) 
+                ? <PermissionCheck/> 
                 : children
             }
         </>
