@@ -80,11 +80,49 @@ export const MenuBarContainer = styled.div`
             }
         }
         & .inner{
-            height: 500px;
-            width: 500px;
+            width: 40%;
             background-color: white;
             border-radius: 10px;
             transform: translateX(calc(-100%));
+            display: flex; flex-direction: column; align-items: center;
+            & .title{
+                margin: 40px 0;
+                width: 90%;
+                display: flex;
+                align-items: center;
+                & .icon{
+                    margin-right: 20px;
+                }
+                & h3{
+                    font-size: 1.5em;
+                    font-weight: 500;
+                }
+            }
+            & form{
+                margin-bottom: 40px;
+                width: 90%;
+                display: flex; flex-direction: column;
+                & input{
+                    width: 100%;
+                    box-sizing: border-box;
+                    border: 2px solid #e2e2e2;
+                    border-radius: 5px;
+                    height: 50px;
+                    padding: 10px 20px;
+                    margin-bottom: 20px;
+                }
+                & button{
+                    margin-top: 20px;
+                    width: 30%;
+                    padding: 20px;
+                    border-radius: 5px;
+                    background: linear-gradient(45deg,purple,blue);
+                    color: white;
+                    font-weight: 500;
+                    cursor: pointer;
+                    font-size: 1.1em;
+                }
+            }
         }
     }
 `

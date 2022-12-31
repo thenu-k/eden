@@ -38,6 +38,7 @@ const AuthModal = ({type}) => {
                 //Adding the user to the database
                 const transferPackage = {
                     uid: data.user.uid,
+                    email: data.user.email,
                     created: new Date()
                 }
                 const dbRef = collection(db, 'users')
