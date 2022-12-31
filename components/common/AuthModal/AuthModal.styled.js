@@ -31,7 +31,7 @@ export const AuthModalContainer = styled.div`
                 display: flex; justify-content: space-between;
                 & button{
                     border-radius: 5px; 
-                    padding: 20px 25px;
+                    padding: 25px 30px;
                     background-color: #f8f8f8;
                     color: black;
                     cursor: pointer;

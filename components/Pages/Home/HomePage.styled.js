@@ -7,7 +7,7 @@ export const HomeContainer = styled.div`
         display: flex; align-items: center;  flex-direction: column;
         & .text{
             margin: 75px 0;
-            width: 50%; min-width: 300px;
+            width: 60%; min-width: 300px;
             display: flex; flex-direction: column; align-items: center;
             & h2{
                 width: clamp(200px, 100%, 800px);

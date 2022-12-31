@@ -13,7 +13,7 @@ const HomePage = () => {
                     </h2>
                     <div className="intro outer">
                         <p>
-                            But You Might. With Eden You Can Store All Your Thoughts With A Single Click. Seriously Though - I've Got A Bigger Writer's Block Than George R R Martin.
+                            But You Might. With Eden You Can Store All Your Thoughts in a Single Click. Create an Account and Come Back To Them Whenever and Wherever.
                         </p>
                     </div>
                     <ul className="links outer">
