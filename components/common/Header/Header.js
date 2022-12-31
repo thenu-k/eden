@@ -5,7 +5,7 @@ import { useAuth } from '../../auth/authContext';
 
 const Header = () => {
     return (
-        <S.HeaderContainer className='box-shadow-00 center' id='Header'>
+        <S.HeaderContainer className='box-shadow-02 center' id='Header'>
             <div className="header inner">
                 <h1><Link href='/'>EDEN</Link></h1>
                 <nav>
