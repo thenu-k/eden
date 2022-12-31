@@ -4,6 +4,7 @@ import {getAuth, signOut} from 'firebase/auth'
 import { useAuth } from '../../auth/authContext';
 
 const Header = () => {
+    const {user} = useAuth()
     return (
         <S.HeaderContainer className='box-shadow-02 center' id='Header'>
             <div className="header inner">
@@ -11,8 +12,11 @@ const Header = () => {
                 <nav>
                     <ul>
                         <li><Link href='/dashboard/dashboard'>Dashboard</Link></li>
-                        <li><Link href='/login'>Login</Link></li>
-                        <li><Link href='/register'>Register</Link></li>
+                        {
+                            (user!=null)
+                                ?   <li><button>Sign Out</button></li>
+                                :   <><li><Link href='/login'>Login</Link></li><li><Link href='/register'>Register</Link></li></>
+                        }
                     </ul>
                 </nav>
             </div>

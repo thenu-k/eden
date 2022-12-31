@@ -31,10 +31,11 @@ export const HeaderContainer = styled.header`
                 & li{
                     height: 100%;
                     display: flex; justify-content: center; align-items: center;
-                    & a{
+                    & a, & button{
                         height: 100%;
                         padding: 0px 20px;
                         cursor: pointer;
+                        background-color: unset;
                         &:hover{
                             background-color: #ececec;
                         }
