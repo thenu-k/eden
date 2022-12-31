@@ -18,8 +18,8 @@ export const LandingContainer = styled.section`
             margin: 0px 0;
             display: flex; flex-direction: column; align-items: center;
             & h1{
-                font-size: 3.5em;
-                font-weight: 700;
+                font-size: 4.5em;
+                font-weight: 500;
                 margin-bottom:30px;
                 text-align: center;
                 & span{
