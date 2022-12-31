@@ -15,6 +15,10 @@ export const NoteTemplateContainer = styled.div`
         padding: 20px 20px;
         background-color: white;
         box-sizing: border-box;
+        cursor: pointer;
+        &:hover{
+            background-color: #f8f8f8;
+        }
         & .com-1{
             width: 100%;
             height: 100%;

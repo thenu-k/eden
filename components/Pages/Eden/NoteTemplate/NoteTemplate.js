@@ -1,9 +1,14 @@
+import { redirect } from 'next/dist/server/api-utils';
+import { useRouter } from 'next/router';
 import * as S from './NoteTemplate.styled'
-import { FaReceipt } from "react-icons/fa";
 
 const NoteTemplate = ({details}) => {
+    const router = useRouter()
+    const redirect = () => {
+        router.push(`/note/${details.noteID}`)
+    }
     return (
-        <S.NoteTemplateContainer className='noteTemplate center box-shadow-01'>
+        <S.NoteTemplateContainer className='noteTemplate center box-shadow-01' id={details.noteID} onClick={redirect}>
             <div className="inner noteTemplate">
                 <div className="title com-1 center">
                     {/* <label>Title</label> */}
