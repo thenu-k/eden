@@ -54,13 +54,6 @@ const AuthModal = ({type}) => {
             const auth = getAuth();
             try{
                 await signInWithEmailAndPassword(auth, email, password)
-                if(redirect===true){
-                    console.log('Setting redirect as intermediate')
-                    setRedirect('intermediate')
-                    router.back()
-                    return
-                }
-                console.log('Default redirect')
                 router.push('/notebook')
             } catch (err){
                 setErrorMessage(err.message)

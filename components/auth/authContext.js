@@ -12,8 +12,6 @@ export const useAuth = () => useContext(AuthContext)
 //The context wrapper that will enable a component to use the hook
 export const AuthContextWrapper = ({children}) => {
     const [user, setUser] = useState(null)
-    //This variable will be used to redirect the user after logging in. It can take the values: 'true', 'false', 'intermediate'
-    const [redirect, setRedirect] = useState('false')
     // Loading state of auth wrapper
     const [loading, setLoading] = useState(true)
     useEffect(()=> {
@@ -35,7 +33,7 @@ export const AuthContextWrapper = ({children}) => {
     }, [])
     
     return (
-        <AuthContext.Provider value={{user, redirect, setRedirect}}>
+        <AuthContext.Provider value={{user}}>
             {
                 (loading)
                 ? (<SplashScreen/>)
