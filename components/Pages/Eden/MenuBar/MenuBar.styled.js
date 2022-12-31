@@ -46,9 +46,9 @@ export const MenuBarContainer = styled.div`
         /* transition: backdrop-filter 5s ease-in-out; */
         position: fixed; z-index: 1000;
         top: 0; left: 0;
-        height: 100vh;
-        width: 100vw;
+        height: 100vh; min-height: 550px;
         background-color: transparent;
+        width: 100vw;
         &.on{
             display: flex;
             animation-name: blurIn;
@@ -82,6 +82,7 @@ export const MenuBarContainer = styled.div`
         & .inner{
             width: 40%;
             background-color: white;
+            min-width: 500px;
             border-radius: 10px;
             transform: translateX(calc(-100%));
             display: flex; flex-direction: column; align-items: center;

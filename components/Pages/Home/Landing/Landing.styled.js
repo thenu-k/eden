@@ -20,12 +20,13 @@ export const LandingContainer = styled.section`
             & h1{
                 font-size: 4.5em;
                 font-weight: 500;
-                margin-bottom:30px;
+                margin-bottom:50px;
                 text-align: center;
                 & span{
                     color: transparent;
                     background: linear-gradient(45deg, purple, blue);
                     background-clip: text;
+                    -webkit-background-clip: text;
                 }
             }
             & p{

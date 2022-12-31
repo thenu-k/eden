@@ -9,5 +9,11 @@ export const EdenContainer = styled.div`
         display: flex; align-items: center;
         flex-direction: column;
         position: relative;
+        & .noteList{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 `
