@@ -54,7 +54,7 @@ const AuthModal = ({type}) => {
             const auth = getAuth();
             try{
                 await signInWithEmailAndPassword(auth, email, password)
-                router.push('/notebook')
+                router.push((router.query.from && decodeURIComponent(router.query.from)) ?? '/notebook')
             } catch (err){
                 setErrorMessage(err.message)
             }

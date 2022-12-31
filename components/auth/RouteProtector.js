@@ -8,11 +8,13 @@ import { useAuth } from "./authContext";
 const RouteProtector = ({children}) => {
     const {user, setRedirect} = useAuth()
     const router = useRouter()
+    // Redirecting user after login
+    const loginPath = `/login?from=${encodeURIComponent(router.asPath)}` //.pathname gives the dynamic page name
     // A use effect is used as we need the component to re-render evry time the router/user changes
     useEffect(() => {
         if(user===null){
             setTimeout(()=>{
-                router.push('/login')
+                router.push(loginPath)
             }, 500)
         }
     }, [router, user])
