@@ -7,7 +7,7 @@ import Router from 'next/router';
 import NextNProgress from 'nextjs-progressbar';
 
 export default function App({ Component, pageProps }) {
-  const protectedRoutes = ['/dashboard/dashboard']
+  const protectedRoutes = ['/notebook']
   const router = useRouter()
   return(
   <AuthContextWrapper>  

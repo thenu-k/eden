@@ -43,7 +43,7 @@ const AuthModal = ({type}) => {
                 }
                 const dbRef = collection(db, 'users')
                 await addDoc(dbRef, transferPackage)
-                router.push('/dashboard/dashboard')
+                router.push('/notebook')
             } catch (err){
                 setErrorMessage(err.message)
             }
@@ -52,7 +52,7 @@ const AuthModal = ({type}) => {
             const auth = getAuth();
             try{
                 await signInWithEmailAndPassword(auth, email, password)
-                router.push('/dashboard/dashboard')
+                router.push('/notebook')
             } catch (err){
                 setErrorMessage(err.message)
             }
