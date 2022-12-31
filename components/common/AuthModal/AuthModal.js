@@ -4,6 +4,8 @@ import { useRef, useState } from 'react';
 import { loginGoogle } from './AuthFunctions';
 import { useRouter } from 'next/router';
 import { createUserWithEmailAndPassword, getAuth, getRedirectResult, signInWithEmailAndPassword } from 'firebase/auth';
+import { addDoc, collection } from 'firebase/firestore';
+import { db } from '../../../firebase/firebase';
 
 
 const AuthModal = ({type}) => {
@@ -32,7 +34,14 @@ const AuthModal = ({type}) => {
             const auth = getAuth();
             try{
                 //Looks like we don't need to send the firebase config file 
-                await createUserWithEmailAndPassword(auth, email, password, username)
+                const data = await createUserWithEmailAndPassword(auth, email, password)
+                //Adding the user to the database
+                const transferPackage = {
+                    uid: data.user.uid,
+                    created: new Date()
+                }
+                const dbRef = collection(db, 'users')
+                await addDoc(dbRef, transferPackage)
                 router.push('/dashboard/dashboard')
             } catch (err){
                 setErrorMessage(err.message)
