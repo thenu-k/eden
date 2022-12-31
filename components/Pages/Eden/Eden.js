@@ -6,6 +6,15 @@ const Eden = () => {
     const data = [
         {
             title: 'Test', description: 'Hello World', created: '2012-12-12'
+        },
+        {
+            title: 'Test', description: 'Hello World', created: '2012-12-12'
+        },
+        {
+            title: 'Test', description: 'Hello World', created: '2012-12-12'
+        },
+        {
+            title: 'Test', description: 'Hello World', created: '2012-12-12'
         }
     ]
     return (

@@ -12,8 +12,9 @@ export const EdenContainer = styled.div`
         & .noteList{
             width: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
     }
 `

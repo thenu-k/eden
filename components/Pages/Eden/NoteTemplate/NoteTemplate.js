@@ -5,20 +5,16 @@ const NoteTemplate = ({details}) => {
     return (
         <S.NoteTemplateContainer className='noteTemplate center box-shadow-02'>
             <div className="inner noteTemplate">
-                <div className="title com-1">
+                <div className="title com-1 box-shadow-01">
                     {/* <label>Title</label> */}
-                    <div className="iconContainer">
+                    <h5 className='center'>{details.title}</h5>
+                    {/* <div className="iconContainer">
                         <FaReceipt size={30}/>
-                        <h5 className='center'>{details.title}</h5>
-                    </div>
+                    </div> */}
                 </div>
-                <div className="desc com-1">
+                <div className="desc com-1 box-shadow-01">
                     {/* <label>Description</label> */}
                     <p className='center'>{details.description}</p>
-                </div>
-                <div className="created com-1">
-                    {/* <label>Created</label> */}
-                    <span className='center'>{details.created}</span>
                 </div>
             </div>
         </S.NoteTemplateContainer>
