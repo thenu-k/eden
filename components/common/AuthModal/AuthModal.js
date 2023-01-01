@@ -65,6 +65,7 @@ const AuthModal = ({type}) => {
         const provider = new GoogleAuthProvider();
         try{
             await signInWithPopup(auth, provider);
+            router.push((router.query.from && decodeURIComponent(router.query.from)) ?? '/notebook')
         }catch (e){
             console.log(e)
         }
