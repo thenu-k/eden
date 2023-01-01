@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const SplashScreenContainet = styled.div`
     height: 100vh; width: 100vw;
     & h1{
-        font-size: 5em;
+        font-size: 3.5em;
         font-weight: 600;
         letter-spacing: 1px;
         /* color: transparent;
