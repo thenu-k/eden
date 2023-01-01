@@ -39,7 +39,7 @@ export const LandingContainer = styled.section`
                 & a{
                     width: 200px;;
                     padding: 25px 0;
-                    border-radius: 5px;
+                    border-radius: 10px;
                     font-size: 1.2em;
                     color: white;
                     background-color: black;
