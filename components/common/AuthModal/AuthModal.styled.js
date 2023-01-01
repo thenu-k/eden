@@ -16,7 +16,7 @@ export const AuthModalContainer = styled.div`
                 margin-bottom: 10px;
                 font-weight: 700;
             }
-            & P{
+            & p{
                 font-size: 1em;
             }
         }
@@ -74,6 +74,7 @@ export const AuthModalContainer = styled.div`
                         color: white;
                         width: 100%;
                         padding: 20px 0px;
+                        font-weight: 500;
                         cursor: pointer;
                         &:hover{
                             background: linear-gradient(45deg,#3f003f,#000072)

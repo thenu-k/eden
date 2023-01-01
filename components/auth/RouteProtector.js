@@ -13,9 +13,10 @@ const RouteProtector = ({children}) => {
     // A use effect is used as we need the component to re-render evry time the router/user changes
     useEffect(() => {
         if(user===null){
-            setTimeout(()=>{
-                router.push(loginPath)
-            }, 500)
+            // setTimeout(()=>{
+            //     router.push(loginPath)
+            // }, 1)
+            router.push(loginPath)
         }
     }, [router, user])
     return (
