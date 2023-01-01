@@ -20,7 +20,7 @@ export const MenuBarContainer = styled.div`
                 height: 40px;
                 width: 30vw;
                 padding: 0 20px ;
-                border-radius: 5px;
+                border-radius: 10px;
                 box-sizing: border-box;
                 border: 2px solid #e2e2e2;
                 background-color: white;
@@ -34,10 +34,9 @@ export const MenuBarContainer = styled.div`
             & button{
                 height: 40px;
                 padding: 0 20px;
-                background: linear-gradient(45deg, purple, blue);
+                background: #1966FF;
                 color: white;
                 border-radius: 5px;
-                font-weight: 500;
                 cursor: pointer;
             }
         }
@@ -109,19 +108,18 @@ export const MenuBarContainer = styled.div`
                     width: 100%;
                     box-sizing: border-box;
                     border: 2px solid #e2e2e2;
-                    border-radius: 5px;
+                    border-radius: 10px;
                     height: 50px;
                     padding: 10px 20px;
                     margin-bottom: 20px;
                 }
                 & button{
                     margin-top: 20px;
-                    width: 30%;
-                    padding: 20px;
+                    width: 20%;
+                    padding: 10px;
                     border-radius: 5px;
-                    background: linear-gradient(45deg,purple,blue);
+                    background: #1966FF;
                     color: white;
-                    font-weight: 500;
                     cursor: pointer;
                     font-size: 1.1em;
                 }
@@ -135,19 +133,22 @@ export const MenuBarContainer = styled.div`
             width: 90%;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             & .search.outer{
                 width: 100%;;
                 & input{
                     width: 100%;;
+                    text-align: center;
                 }
                 margin-top: 0;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
             & .controls.outer{
+                width: 100%;
                 margin-left: unset;
                 margin-bottom: 0px;
                 & button{
+                    width: 100%;
                     font-size: 0.9em;
                 }
             }

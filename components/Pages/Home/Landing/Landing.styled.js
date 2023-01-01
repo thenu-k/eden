@@ -17,7 +17,7 @@ export const LandingContainer = styled.section`
             & h1{
                 font-size: 3.5em;
                 font-weight: 500;
-                margin-bottom:30px;
+                margin-bottom:40px;
                 text-align: center;
                 & span{
                     color: transparent;

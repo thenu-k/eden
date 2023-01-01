@@ -69,15 +69,15 @@ export const AuthModalContainer = styled.div`
                     width: 100%;
                     margin: 40px 0;
                     & button{
-                        background: linear-gradient(45deg, purple, blue);
+                        background: #1966FF;
                         border-radius: 5px;
                         color: white;
                         width: 100%;
                         padding: 20px 0px;
-                        font-weight: 500;
+                        font-weight: 400;
                         cursor: pointer;
                         &:hover{
-                            background: linear-gradient(45deg,#3f003f,#000072)
+                            opacity: 0.8;
                         }
                     }
                 }

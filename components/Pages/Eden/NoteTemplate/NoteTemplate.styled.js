@@ -6,6 +6,9 @@ export const NoteTemplateContainer = styled.div`
     background-color: transparent;
     align-self: flex-start;
     border-radius: 10px;
+    height: 100%;
+    align-items: flex-start;
+    background-color: white;;
     & .inner.noteTemplate{
         border-radius: 10px;
         width: 100%;

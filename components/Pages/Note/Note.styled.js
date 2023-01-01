@@ -46,8 +46,9 @@ export const NoteContainer = styled.div`
                         }
                         &.save{
                             margin-left: auto;
-                            background: linear-gradient(45deg, purple, blue);
+                            background: #1966FF;
                             color: white;
+                            box-shadow: none;
                             &:hover{
                                 opacity: 0.8;
                             }
@@ -75,7 +76,7 @@ export const NoteContainer = styled.div`
             & .ProseMirror{
                 box-sizing: border-box;
                 width: 100%;
-                padding: 30px 20px;
+                padding: 30px 30px;
                 min-height: 400px;
                 &:focus{
                     outline: none;
@@ -159,7 +160,7 @@ export const NoteContainer = styled.div`
         }
     }
 
-    @media all and (max-width: 600px){
+    @media all and (max-width: 500px){
         & .inner.note{
             & .editorBar{
                 & .inner.editorbar{
@@ -175,6 +176,9 @@ export const NoteContainer = styled.div`
                     }
                 }
             }
+        }
+        & .ProseMirror{
+            padding: 30px 20px !important;
         }
     }
 `
