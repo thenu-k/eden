@@ -11,7 +11,7 @@ export const PermissionCheckContainer = styled.div`
             transform: translateY(-60px);
             width: 48px;
             height: 48px;
-            border: 5px solid black;
+            border: 5px solid black;;
             border-bottom-color: transparent;
             border-radius: 50%;
             display: inline-block;

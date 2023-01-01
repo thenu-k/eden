@@ -53,4 +53,47 @@ export const LandingContainer = styled.section`
             }
         }
     }
+
+    @media all and (max-width: 1000px){
+        & .landing.inner{
+            & .text{
+                & h1{
+                    font-size: 3.5em;
+                }
+                & .links{
+                    & a{
+                        width: 150px;
+                        padding: 20px 0;
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width: 600px){
+
+        & .landing.inner{
+            & .text{
+                align-items: center;
+                & h1{
+                    width: 100%;
+                    text-align: center;
+                    font-size: 2.5em;
+                    margin-bottom:40px;
+                }
+                & .links{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;;
+                    & a{
+                        margin-right: 0 !important;
+                        width: 60%;
+                        padding: 20px 0;
+                        font-size: 1em;
+                        margin-bottom: 20px
+                    }
+                }
+            }
+        }
+    }
 `
