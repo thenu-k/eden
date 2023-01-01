@@ -2,21 +2,19 @@ import styled from "styled-components";
 
 export const LandingContainer = styled.section`
     width: 100%;
-    /* background-image: url('/landing.jpg'); */
-    background-size: cover; background-repeat: repeat;
-    background-position:center; background-attachment: scroll;
-    background-position-x: -10px;
+    min-height: calc(100vh - 60px);
     & .landing.inner{
         width: 85%;
         display: flex; align-items: center;
         flex-direction: row; justify-content: center;
         /* background-color: #F8F9FF; */
         & .text{
-            padding: 100px 0px;
+            /* padding: 100px 0px; */
             border-radius: 20px;
             width: 100%;
             margin: 0px 0;
             display: flex; flex-direction: column; align-items: center;
+            transform: translateY(-60px);
             & h1{
                 font-size: 4.5em;
                 font-weight: 500;

@@ -6,7 +6,7 @@ const HomePage = () => {
     const facts = ['sdf','asdf']
     return (
         <S.HomeContainer id='HomePage' className='center'>
-            <div className="homepage inner">
+            <div className="homepage inner center">
                 <Landing/>
             </div>
         </S.HomeContainer>
