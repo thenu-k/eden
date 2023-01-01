@@ -33,12 +33,11 @@ const MenuBar = () => {
             uid: user.uid, title: titleValue, description: descValue, content: '', created: new Date()
         }
         try{
-            await addDoc(dbRef, transferPackage)
-            setError('Submission Sent')
-            setTimeout(() => {
-                modalRef.current.classList.remove('on')
-                // router.reload()
-            }, 1000)
+            addDoc(dbRef, transferPackage)
+            .then(docRef => {
+                setError('Submission Sent')
+                router.push(`/note/${docRef.id}`)
+            })
         }catch (err){
             setError(err)
         }
