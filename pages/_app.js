@@ -5,6 +5,7 @@ import PageFormat from '../components/common/PageFormat/PageFormat'
 import '../components/global.css'
 import Router from 'next/router';
 import NextNProgress from 'nextjs-progressbar';
+import { Analytics } from '@vercel/analytics/react';
 
 export default function App({ Component, pageProps }) {
   const protectedRoutes = ['/notebook']
