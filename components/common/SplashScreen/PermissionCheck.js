@@ -3,15 +3,8 @@ import * as S from './PermissionCheck.styled'
 const PermissionCheck = () => {
     return (
         <S.PermissionCheckContainer id='PermissionCheck' className='center'>
-        <div className="inner">
-            <div class="gooey">
-                <span class="dot"></span>
-                <div class="dots">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+        <div className="inner center">
+        <span class="loader"></span>
         </div>
         </S.PermissionCheckContainer>
     );

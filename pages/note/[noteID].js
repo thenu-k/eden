@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useAuth } from '../../components/auth/authContext';
+import PermissionCheck from '../../components/common/SplashScreen/PermissionCheck';
 import Note from '../../components/Pages/Note/Note';
 import { db } from '../../firebase/firebase';
 
@@ -22,7 +23,11 @@ export default function Home() {
         content: doc.data().content,
         created: doc.data().created
       })) 
+      if(result.length===0){
+        setNoteData(0)
+      }else{
       setNoteData(result[0])
+      }
     }catch(err){
       console.log(err)
     }
@@ -39,9 +44,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {
-        (noteData!=null)
-          ? <Note noteData={noteData}/>
-          : <>Does Not Exist</>
+        (noteData===0) ? <>Does Not Exist</> : (
+          (noteData!=null)
+            ? <Note noteData={noteData}/>
+            : <PermissionCheck/>
+        )
       }
     </>
   )
