@@ -12,4 +12,10 @@ export const SplashScreenContainet = styled.div`
         background-size: 100%;
         background-clip: text; */
     }
+
+    @media all and (max-width: 500px){
+        & h1.safari{
+            transform: translateY(-100px);
+        }
+    }
 `
