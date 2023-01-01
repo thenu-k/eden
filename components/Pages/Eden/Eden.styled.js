@@ -17,4 +17,25 @@ export const EdenContainer = styled.div`
             grid-auto-columns: auto;
         }
     }
+    @media all and (max-width: 1000px){
+        & .eden.inner{
+            & .noteList{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+    @media all and (max-width: 700px){
+        & .eden.inner{
+            & .noteList{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+    @media all and (max-width: 500px){
+        & .eden.inner{
+            & .noteList{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
 `
