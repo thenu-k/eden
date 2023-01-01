@@ -15,7 +15,7 @@ export const SplashScreenContainet = styled.div`
 
     @media all and (max-width: 500px){
         & h1{
-            transform: translateY(-100px);
+            transform: translateY(-50px);
         }
     }
 `
