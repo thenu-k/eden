@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { collection, doc, updateDoc, where } from 'firebase/firestore'
 import { db } from '../../../firebase/firebase'
 import { useRouter } from 'next/router'
-import { FaBold, FaHeading, FaParagraph, FaListUl } from "react-icons/fa";
+import { FaBold, FaHeading, FaParagraph, FaListUl,FaArrowLeft, FaSave } from "react-icons/fa";
 
 const MenuBar = ({ editor}) => {
     if (!editor) {
@@ -40,12 +40,6 @@ const MenuBar = ({ editor}) => {
           className={editor.isActive('heading', { level: 3 }) ? 'is-active' : ''}
         >
           <FaHeading/>
-        </button>
-        <button
-          onClick={(e) => {e.preventDefault(); editor.chain().focus().toggleOrderedList().run()}}
-          className={editor.isActive('orderedList') ? 'is-active' : ''}
-        >
-            <FaListUl/>
         </button>
       </>
     )
@@ -83,11 +77,11 @@ const Note = ({noteData}) => {
             <div className="note inner">
                 <div className="editorBar box-shadow-01 center">
                     <div className="inner editorbar">
-                        <button className="back" onClick={back}>Back</button>
                         <div className="controls">
-                            <MenuBar editor={editor}/>
+                          <button className="back" onClick={back}><FaArrowLeft/></button>
+                          <MenuBar editor={editor}/>
+                          <button onClick={save} className='save'><FaSave/></button>
                         </div>
-                        <button onClick={save} className='save'>Save</button>
                     </div>
                 </div>
                 <div className="textEditor box-shadow-01">

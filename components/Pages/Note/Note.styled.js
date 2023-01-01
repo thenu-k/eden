@@ -19,27 +19,14 @@ export const NoteContainer = styled.div`
                 height: 100%;
                 display: flex; flex-direction: row; align-items: center;
                 width: 95%;
-                & button{
-                    width: 80px;
-                    height: 40px;
-                    border-radius: 5px;
-                    color: white;
-                    font-weight: 500;
-                    background: linear-gradient(45deg, purple, blue);
-                    cursor: pointer;
-                    &.back{
-                        background:black;
-                    }
-                }
                 & .controls{
                     height: 100%;
-                    flex-grow: 1;
+                    width: 100%;
                     display: flex; align-items: center;
                     & button{
-                        &:first-of-type{
-                            margin-left: 60px;
-                        }
+                        height: 40px;
                         width: 40px;
+                        border-radius: 5px;
                         margin-right: 20px;
                         background: none;
                         background-color: white;
@@ -47,9 +34,23 @@ export const NoteContainer = styled.div`
                         display: flex; align-items: center; justify-content: center;
                         cursor: pointer;
                         box-shadow: 0px 0px 3px #929292;
+                        &:hover{
+                            background-color: #ececec;
+                        }
                         &.is-active{
                             background-color: black;
                             color: white;
+                            &:hover{
+                                opacity: 0.8;
+                            }
+                        }
+                        &.save{
+                            margin-left: auto;
+                            background: linear-gradient(45deg, purple, blue);
+                            color: white;
+                            &:hover{
+                                opacity: 0.8;
+                            }
                         }
                     }
                 }
@@ -74,7 +75,7 @@ export const NoteContainer = styled.div`
             & .ProseMirror{
                 box-sizing: border-box;
                 width: 100%;
-                padding: 40px 2.5% 40px 2.5%;
+                padding: 30px 20px;
                 min-height: 400px;
                 &:focus{
                     outline: none;
@@ -154,6 +155,25 @@ export const NoteContainer = styled.div`
                     list-style-type: circle;
                 }
 
+            }
+        }
+    }
+
+    @media all and (max-width: 600px){
+        & .inner.note{
+            & .editorBar{
+                & .inner.editorbar{
+                    & button{
+                        margin: 0 !important;
+                        &.save{
+                            margin-left: unset;
+                        }
+                    }
+                    & .controls{
+                        width: 100%;
+                        display: flex; justify-content: space-evenly;
+                    }
+                }
             }
         }
     }
