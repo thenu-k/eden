@@ -3,7 +3,7 @@ import { FaGoogle, FaApple, FaMicrosoft } from "react-icons/fa";
 import { useRef, useState } from 'react';
 import { loginGoogle } from './AuthFunctions';
 import { useRouter } from 'next/router';
-import { createUserWithEmailAndPassword, getAuth, getRedirectResult, signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, getAuth, getRedirectResult, GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from 'firebase/auth';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../../firebase/firebase';
 import { useAuth } from '../../auth/authContext';
@@ -61,7 +61,13 @@ const AuthModal = ({type}) => {
         }   
     }
     const handleGoogleSubmit = async(e) => {
-        await loginGoogle()
+        const auth = getAuth();
+        const provider = new GoogleAuthProvider();
+        try{
+            await signInWithPopup(auth, provider);
+        }catch (e){
+            console.log(e)
+        }
     }
     return (
         <S.AuthModalContainer id='AuthModal' className='center'>
