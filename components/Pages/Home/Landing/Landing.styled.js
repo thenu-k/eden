@@ -21,7 +21,7 @@ export const LandingContainer = styled.section`
                 text-align: center;
                 & span{
                     color: transparent;
-                    background: linear-gradient(45deg, purple, blue);
+                    background-color: #1966FF;
                     background-clip: text;
                     -webkit-background-clip: text;
                 }
@@ -40,11 +40,11 @@ export const LandingContainer = styled.section`
                     padding: 20px 0;
                     border-radius: 10px;
                     font-size: 1em;
-                    color: white;
-                    background-color: black;
+                    color: black;
+                    background-color: #E7E7E7;
                     font-weight: 500;
                     &.colored{
-                        background: linear-gradient(45deg, purple, blue);
+                        background-color: #1966FF;
                         color: white;
                         margin-right: 30px;
                     }

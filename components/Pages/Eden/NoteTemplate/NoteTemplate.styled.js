@@ -8,7 +8,10 @@ export const NoteTemplateContainer = styled.div`
     border-radius: 10px;
     height: 100%;
     align-items: flex-start;
-    background-color: white;;
+    background-color: white;
+    &:hover{
+        background-color: #f8f8f8;
+    }
     & .inner.noteTemplate{
         border-radius: 10px;
         width: 100%;
@@ -16,12 +19,8 @@ export const NoteTemplateContainer = styled.div`
         align-items: center;
         flex-direction: column;
         padding: 20px 20px;
-        background-color: white;
         box-sizing: border-box;
         cursor: pointer;
-        &:hover{
-            background-color: #f8f8f8;
-        }
         & .com-1{
             width: 100%;
             height: 100%;
