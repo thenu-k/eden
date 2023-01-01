@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useAuth } from '../../components/auth/authContext';
+import Note from '../../components/Pages/Note/Note';
 import { db } from '../../firebase/firebase';
 
 export default function Home() {
@@ -39,7 +40,7 @@ export default function Home() {
       </Head>
       {
         (noteData!=null)
-          ? <p>{noteData.title}</p>
+          ? <Note noteData={noteData}/>
           : <>Does Not Exist</>
       }
     </>
