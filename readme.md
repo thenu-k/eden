@@ -19,11 +19,11 @@ Link: <a href='http://eden.thenu-kal.com'>https://eden.thenu-kal.com</a>
 ### Gallery
 <br><strong>@ Login</strong>
 <br><br>
-<img src='https://imgur.com/0ElWUOP.png'>
+<img src='https://imgur.com/HcPkLZb.png'>
 <br><br>
 <strong>@ Notebook</strong>
 <br><br>
-<img src='https://imgur.com/VIpH7CO.png'>
+<img src='https://imgur.com/BIxuG1q.png'>
 <br><br>
 <strong>@ New Note</strong>
 <br><br>
@@ -31,4 +31,4 @@ Link: <a href='http://eden.thenu-kal.com'>https://eden.thenu-kal.com</a>
 <br><br>
 <strong>@ Note Editor</strong>
 <br><br>
-<img src='https://imgur.com/SZ1JFvU.png'>
+<img src='https://imgur.com/DlvK1B0.png'>
