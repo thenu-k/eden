@@ -4,6 +4,7 @@ export const EdenContainer = styled.div`
     width: 100%;
     display: flex; flex-direction: row; align-items: center;
     & .eden.inner{
+        max-width: 1500px;
         margin-top: 120px; /* Menu bar position is fixed*/
         width: 85%;
         display: flex; align-items: center;

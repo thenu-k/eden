@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const MenuBarContainer = styled.div`
     width: 85%;
+    max-width: 1500px;
     position: fixed;
     z-index: 99;
     top: 80px;
@@ -16,11 +17,12 @@ export const MenuBarContainer = styled.div`
         & .search.outer{
             margin: 20px 0;
             & input{
-                height: 30px;
+                height: 40px;
                 width: 30vw;
-                padding: 5px 20px ;
+                padding: 0 20px ;
                 border-radius: 5px;
-                outline: 2px solid #e2e2e2;
+                box-sizing: border-box;
+                border: 2px solid #e2e2e2;
                 background-color: white;
                 &:focus{
                     outline: 2px solid #c8c8c8;
@@ -122,6 +124,30 @@ export const MenuBarContainer = styled.div`
                     font-weight: 500;
                     cursor: pointer;
                     font-size: 1.1em;
+                }
+            }
+        }
+    }
+
+    @media all and (max-width: 500px){
+        & .inner.menubar{
+            height: 130px;
+            width: 90%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            & .search.outer{
+                & input{
+                    width: 100%;;
+                }
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+            & .controls.outer{
+                margin-left: unset;
+                margin-bottom: 0px;
+                & button{
+                    font-size: 0.9em;
                 }
             }
         }
