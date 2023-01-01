@@ -30,7 +30,7 @@ export const AuthModalContainer = styled.div`
                 width: 75%;
                 display: flex; justify-content: space-between;
                 & button{
-                    border-radius: 5px; 
+                    border-radius: 10px; 
                     padding: 25px 30px;
                     background-color: #f8f8f8;
                     color: black;
@@ -84,20 +84,39 @@ export const AuthModalContainer = styled.div`
         }
     }
     @media all and (max-width: 600px){
+        background-color: #F8F9FF;
         & .inner.authmodal{
-            width: 90%;
+            width: 100%;
             & form{
+                background-color: #F8F9FF;
+                box-shadow: unset;
                 & .alt{
-                    width: 90%;
+                    padding: 20px 0 0 0;
+                    width: 70%;
                     & button{
                         padding: 5vw 6vw;
                     }
                 }
                 & .mainform{
-                    width: 90%;
+                    width: 70%;
                     & .submit button{
                         border-radius: 10px;
                     }
+                }
+            }
+        }
+    }
+    @media all and (max-width: 600px){
+        & .inner.authmodal{
+            & form{
+                & .alt{
+                    width: 80%;
+                    & button{
+                        border-radius: 10px;
+                    }
+                }
+                & .mainform{
+                    width: 80%;
                 }
             }
         }
