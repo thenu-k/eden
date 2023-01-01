@@ -8,7 +8,7 @@ export const AuthModalContainer = styled.div`
         width: 500px;
         & .text{
             width: 100%;
-            padding: 20px 0 25px 0;
+            padding: 40px 0 25px 0;
             display: flex; flex-direction: column; align-items: center;
             & h1{
                 letter-spacing: 1px;
@@ -78,6 +78,25 @@ export const AuthModalContainer = styled.div`
                         &:hover{
                             background: linear-gradient(45deg,#3f003f,#000072)
                         }
+                    }
+                }
+            }
+        }
+    }
+    @media all and (max-width: 600px){
+        & .inner.authmodal{
+            width: 90%;
+            & form{
+                & .alt{
+                    width: 90%;
+                    & button{
+                        padding: 5vw 6vw;
+                    }
+                }
+                & .mainform{
+                    width: 90%;
+                    & .submit button{
+                        border-radius: 10px;
                     }
                 }
             }
