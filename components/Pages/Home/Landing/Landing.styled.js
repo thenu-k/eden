@@ -14,7 +14,6 @@ export const LandingContainer = styled.section`
             width: 100%;
             margin: 0px 0;
             display: flex; flex-direction: column; align-items: center;
-            transform: translateY(-60px);
             & h1{
                 font-size: 4.5em;
                 font-weight: 500;
