@@ -33,8 +33,24 @@ export const NoteTemplateContainer = styled.div`
             }
             & p{
                 font-size: 0.9em;
-                font-weight: 500;
+                font-weight: 400;
                 color: black;
+            }
+        }
+    }
+
+    @media all and (max-width: 600px){
+        & .inner.noteTemplate{
+            & .com-1{
+                &:not(:last-of-type){
+                    margin-bottom: 10px;
+                }
+                & h5{
+                    font-size: 1em;
+                }
+                & p{
+                    font-weight: 400;
+                }
             }
         }
     }
