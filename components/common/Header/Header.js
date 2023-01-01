@@ -19,7 +19,7 @@ const Header = () => {
                 <h1><Link href='/'>EDEN</Link></h1>
                 <nav>
                     <ul>
-                        <li><Link href='/notebook'>Dashboard</Link></li>
+                        <li><Link href='/notebook'>Notebook</Link></li>
                         {
                             (user!=null)
                                 ?   <li><button onClick={logOut}>Sign Out</button></li>
