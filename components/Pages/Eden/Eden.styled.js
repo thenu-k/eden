@@ -32,6 +32,11 @@ export const EdenContainer = styled.div`
             }
         }
     }
+    @media all and (max-width: 600px){
+        & .eden.inner{
+            margin-top: 170px;
+        }
+    }
     @media all and (max-width: 500px){
         & .eden.inner{
             & .noteList{

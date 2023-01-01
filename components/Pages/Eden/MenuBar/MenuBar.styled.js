@@ -129,7 +129,7 @@ export const MenuBarContainer = styled.div`
         }
     }
 
-    @media all and (max-width: 500px){
+    @media all and (max-width: 600px){
         & .inner.menubar{
             height: 130px;
             width: 90%;
@@ -137,6 +137,7 @@ export const MenuBarContainer = styled.div`
             justify-content: center;
             align-items: flex-start;
             & .search.outer{
+                width: 100%;;
                 & input{
                     width: 100%;;
                 }
