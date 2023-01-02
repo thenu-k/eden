@@ -12,6 +12,7 @@ export const NoteTemplateContainer = styled.div`
     background-color: white;
     &:hover{
         background-color: #f8f8f8;
+        cursor: pointer;
     }
     & .inner.noteTemplate{
         border-radius: 10px;
@@ -44,6 +45,12 @@ export const NoteTemplateContainer = styled.div`
 
     @media all and (max-width: 600px){
         min-height: 100px;
+        &:hover{
+            background-color: white;
+        }
+        &:active{
+            background-color: #f8f8f8;
+        }
         & .inner.noteTemplate{
             & .com-1{
                 &:not(:last-of-type){
