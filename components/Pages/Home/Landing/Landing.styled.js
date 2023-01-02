@@ -35,7 +35,7 @@ export const LandingContainer = styled.section`
             }
             & .links{
                 display: flex;
-                & a{
+                & .centerButtons{
                     width: 150px;;
                     padding: 20px 0;
                     border-radius: 10px;
@@ -43,10 +43,14 @@ export const LandingContainer = styled.section`
                     color: black;
                     background-color: #E7E7E7;
                     font-weight: 500;
+                    cursor: pointer;
                     &.colored{
                         background: linear-gradient(45deg,purple,blue);
                         color: white;
                         margin-right: 30px;
+                    }
+                    &:hover{
+                        opacity: 0.8;
                     }
                 }
             }

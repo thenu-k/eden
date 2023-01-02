@@ -17,3 +17,8 @@ export const db = getFirestore(app)
 
 //Auth config
 export const auth = getAuth()
+
+//guest account
+export const guestDetails = {
+  email: 'devdebroglie@gmail.com', password: 'guest123'
+}

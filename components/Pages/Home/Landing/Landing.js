@@ -1,7 +1,20 @@
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { guestDetails } from '../../../../firebase/firebase';
 import * as S from './Landing.styled'
 
 const Landing = () => {
+    const auth = getAuth()
+    const router = useRouter()
+    const guestLogin = async() => {
+        try{
+            await signInWithEmailAndPassword(auth, guestDetails.email, guestDetails.password)
+            router.push('/notebook')
+        } catch (err){
+            console.log(err)
+        }
+    }
     return (
         <S.LandingContainer className='center' id='Landing'>
             <div className="landing inner">
@@ -9,8 +22,8 @@ const Landing = () => {
                     <h1>All <span>Your Notes</span> <br/> In One Place</h1>
                     {/* <p>Got an idea? Jot it down here and let it flourish. <br/> Create an account or continue as a guest.</p> */}
                     <div className="links center">
-                        <Link href='/notebook' className='center colored'>Notebook</Link>
-                        <Link href='https://github.com/thenu-k/eden' target={'_blank'} className='center'>Github</Link>
+                        <Link href='/notebook' className='center colored centerButtons'>Notebook</Link>
+                        <button onClick={guestLogin} className='center centerButtons'>Guest</button>
                     </div>
                 </div>
             </div>
