@@ -67,5 +67,6 @@ export const NoteTemplateContainer = styled.div`
     }
     @media all and (max-width: 500px){
         min-height: none;
+        height: fit-content;
     }
 `
