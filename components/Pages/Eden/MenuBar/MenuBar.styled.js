@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MenuBarContainer = styled.div`
-    width: 95%;
+    width: 85%;
     max-width: 1500px;
     position: fixed;
     z-index: 99;
@@ -132,6 +132,7 @@ export const MenuBarContainer = styled.div`
     }
 
     @media all and (max-width: 600px){
+        width: 95%;
         & .inner.menubar{
             height: 80px;
             width: 90%;
