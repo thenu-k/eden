@@ -40,6 +40,18 @@ export const HeaderContainer = styled.header`
                             background-color: #ececec;
                         }
                     }
+                    & .blue{
+                        height: unset;
+                        margin-left:20px;
+                        padding: 8px 15px;
+                        color: white;
+                        background-color: #1966FF;
+                        border-radius: 10px;
+                        &:hover{
+                            background-color: #1966FF;
+                            opacity: 0.8;
+                        }
+                    }
                 }
             }
         }

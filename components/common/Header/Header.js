@@ -22,8 +22,8 @@ const Header = () => {
                         <li><Link href='/notebook'>Notebook</Link></li>
                         {
                             (user!=null)
-                                ?   <li><button onClick={logOut}>Sign Out</button></li>
-                                :   <><li><Link href='/login'>Login</Link></li><li><Link href='/register'>Register</Link></li></>
+                                ?   <li><button onClick={logOut} className='blue'>Sign Out</button></li>
+                                :   <><li><Link href='/login'>Login</Link></li><li><Link href='/register' className='blue'>Join</Link></li></>
                         }
                     </ul>
                 </nav>

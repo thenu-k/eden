@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const LandingContainer = styled.section`
     width: 100%;
-    min-height: calc(100vh);
+    min-height: max(calc(100vh), 500px);
     & .landing.inner{
         width: 85%;
         display: flex; align-items: center;
@@ -17,11 +17,11 @@ export const LandingContainer = styled.section`
             & h1{
                 font-size: 3.5em;
                 font-weight: 500;
-                margin-bottom:30px;
+                margin-bottom:40px;
                 text-align: center;
                 & span{
                     color: transparent;
-                    background: linear-gradient(45deg, purple, blue);
+                    background: linear-gradient(45deg,#b200b2,#0c62e7);
                     background-clip: text;
                     -webkit-background-clip: text;
                 }
@@ -40,11 +40,11 @@ export const LandingContainer = styled.section`
                     padding: 20px 0;
                     border-radius: 10px;
                     font-size: 1em;
-                    color: white;
-                    background-color: black;
+                    color: black;
+                    background-color: #E7E7E7;
                     font-weight: 500;
                     &.colored{
-                        background: linear-gradient(45deg, purple, blue);
+                        background: linear-gradient(45deg,#b200b2,#0c62e7);
                         color: white;
                         margin-right: 30px;
                     }
