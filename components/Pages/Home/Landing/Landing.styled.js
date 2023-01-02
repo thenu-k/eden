@@ -99,7 +99,7 @@ export const LandingContainer = styled.section`
                         margin-right: 10px !important;
                         width: 60%;
                         padding: 15px 0;
-                        font-weight: normal;
+                        font-weight: 500;
                     }
                 }
             }
