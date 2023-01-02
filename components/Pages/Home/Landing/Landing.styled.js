@@ -2,7 +2,11 @@ import styled from "styled-components";
 
 export const LandingContainer = styled.section`
     width: 100%;
-    min-height: max(calc(100vh), 500px);
+    /* min-height: max(calc(100vh), 500px); */
+    position: fixed;
+    z-index: 99;
+    height: auto;
+    top: 0; bottom: 0;
     & .landing.inner{
         width: 85%;
         display: flex; align-items: center;
@@ -81,20 +85,21 @@ export const LandingContainer = styled.section`
                 & h1{
                     width: 100%;
                     text-align: center;
-                    font-size: 2.5em;
-                    margin-bottom:40px;
+                    font-size: 2.3em;
+                    margin-bottom:30px;
                 }
                 & .links{
                     display: flex;
-                    flex-direction: column;
+                    flex-direction: row;
                     align-items: center;
                     width: 100%;;
-                    & a{
-                        margin-right: 0 !important;
+                    & .centerButtons{
+                        width: 100px !important;
+                        font-size: 0.8em;
+                        margin-right: 10px !important;
                         width: 60%;
-                        padding: 20px 0;
-                        font-size: 1em;
-                        margin-bottom: 20px
+                        padding: 15px 0;
+                        font-weight: normal;
                     }
                 }
             }
