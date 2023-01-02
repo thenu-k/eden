@@ -46,7 +46,7 @@ export const NoteContainer = styled.div`
                         }
                         &.save{
                             margin-left: auto;
-                            background: #1966FF;
+                            background: linear-gradient(45deg,purple,blue);;
                             color: white;
                             box-shadow: none;
                             &:hover{

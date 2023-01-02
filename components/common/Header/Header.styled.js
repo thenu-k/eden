@@ -45,7 +45,7 @@ export const HeaderContainer = styled.header`
                         margin-left:20px;
                         padding: 8px 15px;
                         color: white;
-                        background-color: #1966FF;
+                        background: linear-gradient(45deg,purple,blue);;
                         border-radius: 10px;
                         &:hover{
                             background-color: #1966FF;

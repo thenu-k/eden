@@ -34,7 +34,10 @@ export const MenuBarContainer = styled.div`
             & button{
                 height: 40px;
                 padding: 0 20px;
-                background: #1966FF;
+                background: linear-gradient(45deg,purple,blue);
+                &:hover{
+                    opacity: 0.8;
+                }
                 color: white;
                 border-radius: 10px;
                 cursor: pointer;
@@ -118,7 +121,7 @@ export const MenuBarContainer = styled.div`
                     width: 20%;
                     padding: 10px 10px;
                     border-radius: 10px;
-                    background: #1966FF;
+                    background: linear-gradient(45deg,purple,blue);;
                     color: white;
                     cursor: pointer;
                     font-size: 1.1em;

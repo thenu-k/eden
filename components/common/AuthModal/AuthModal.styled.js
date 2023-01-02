@@ -69,7 +69,7 @@ export const AuthModalContainer = styled.div`
                     width: 100%;
                     margin: 40px 0;
                     & button{
-                        background: #1966FF;
+                        background: linear-gradient(45deg,purple,blue);;
                         border-radius: 10px;
                         color: white;
                         width: 100%;
