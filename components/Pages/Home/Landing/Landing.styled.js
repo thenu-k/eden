@@ -92,7 +92,7 @@ export const LandingContainer = styled.section`
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    width: 90%;
+                    width: 90%; max-width: 250px;
                     justify-content: space-evenly;
                     & .centerButtons{
                         width: 100px !important;
