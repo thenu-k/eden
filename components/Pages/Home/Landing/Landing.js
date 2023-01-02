@@ -20,7 +20,7 @@ const Landing = () => {
         }
         setTimeout(()=> {
             setLoading(false)
-        }, 1000)
+        }, 0)
     }
     return (
         <S.LandingContainer className='center' id='Landing'>
