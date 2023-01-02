@@ -15,7 +15,7 @@ export const EdenContainer = styled.div`
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             grid-gap: 15px;
-            grid-auto-columns: auto;
+            grid-auto-columns: min-content;
         }
     }
     @media all and (max-width: 1000px){
