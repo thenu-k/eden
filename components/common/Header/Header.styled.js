@@ -56,4 +56,15 @@ export const HeaderContainer = styled.header`
             }
         }
     }
+    @media all and (max-width: 600px){
+        & nav{
+            display: none;
+        }
+        & .header.inner{
+            justify-content: center;
+            & h1 a{
+                padding: 0 10px;
+            }
+        }
+    }
 `
