@@ -63,38 +63,30 @@ export const HeaderContainer = styled.header`
     }
     @media all and (max-width: 600px){
         &> .sideMenu{
-            display: none;
+            display: flex;
             position: fixed;
-            z-index: 9998;
+            z-index: 9999;
+            right: -100%;
             width: 100vw;
-            height: auto; top: 0; bottom: 0; left: 0;
+            height: auto; top: 0; bottom: 0;
+            transition: right 500ms ease-in-out;
             &.on{
-                display: flex;
+                right: 0;
             }
-            transition: all 500ms ease-in-out;
-            flex-direction: row; 
+            display: flex; flex-direction: row; 
             & .sideMenu.inner{
-                transition: right 500ms ease-in-out;
-                position: relative;
-                z-index: 9999;
-                background-color: white;
-                top: 0; right: -100%;
+                background-color: #F8F9FF;
                 width: 250px;
                 height: 100%;
             }
-            &.on .sideMenu.inner{
-                transition: right 500ms ease-in-out;
-                right: 0;
-            }
             & .transparent{
-                opacity: 0;
                 height: 100%;
                 flex-grow: 1;
+                opacity: 0;
                 backdrop-filter: blur(1px);
-                transition: all 500ms ease-in-out;
+                transition: opacity 100ms ease-in-out;
             }
             &.on .transparent{
-                display: flex;
                 opacity: 1;
             }
         }

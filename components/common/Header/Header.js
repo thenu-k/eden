@@ -40,9 +40,9 @@ const Header = () => {
                     <FaBars color='black' size={22}/>
                 </div>
             </div>
-            <div className="sideMenu box-shadow-01" ref={sideMenuRef}>
+            <div className="sideMenu" ref={sideMenuRef}>
                 <div className="transparent" onClick={turnOffMenu}></div>
-                <div className="sideMenu inner">
+                <div className="sideMenu inner box-shadow-01">
                     <div className="closeIcon"></div>
                     <nav className='normal'>
                         <ul>
