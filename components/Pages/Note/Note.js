@@ -6,6 +6,7 @@ import { collection, doc, updateDoc, where } from 'firebase/firestore'
 import { db } from '../../../firebase/firebase'
 import { useRouter } from 'next/router'
 import { FaBold, FaHeading, FaParagraph, FaListUl,FaArrowLeft, FaSave } from "react-icons/fa";
+import MiniLoader from '../../common/MiniLoader/MiniLoader'
 
 const MenuBar = ({ editor}) => {
     if (!editor) {
@@ -47,6 +48,7 @@ const MenuBar = ({ editor}) => {
 
 const Note = ({noteData}) => {
     const router = useRouter()
+    const [loading, setLoading] = useState(false)
     const [content, setContent] = useState(noteData.content)
     const editor = useEditor({
         editable: true,
@@ -63,14 +65,16 @@ const Note = ({noteData}) => {
         router.push('/notebook')
     }
     const save = async() => {
-        const docRef = doc(db, 'notes', noteData.noteID)
-        try{
-            await updateDoc(docRef, {
-                content: content
-            })
-        }catch(err){
-            console.log(err)
-        }
+      setLoading(true)
+      const docRef = doc(db, 'notes', noteData.noteID)
+      try{
+          await updateDoc(docRef, {
+              content: content
+          })
+          setLoading(false)
+      }catch(err){
+          console.log(err)
+      }
     }
     return (
         <S.NoteContainer id='Note' className='center'>
@@ -89,6 +93,11 @@ const Note = ({noteData}) => {
                     <EditorContent editor={editor} />
                 </div>
             </div>
+            {
+                (loading)
+                    ? <MiniLoader/>
+                    : null
+            }
         </S.NoteContainer>
     );
 }

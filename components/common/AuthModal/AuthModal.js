@@ -7,10 +7,12 @@ import { createUserWithEmailAndPassword, getAuth, getRedirectResult, GoogleAuthP
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../../firebase/firebase';
 import { useAuth } from '../../auth/authContext';
+import MiniLoader from '../MiniLoader/MiniLoader';
 
 
 const AuthModal = ({type}) => {
     const {redirect, setRedirect} = useAuth()
+    const [loading, setLoading] = useState(false)
     const router = useRouter()
     var  OutputPackage;
     const [errorMessage, setErrorMessage] = useState(null)
@@ -29,6 +31,7 @@ const AuthModal = ({type}) => {
     const usernameInputRef = useRef()
     const handleSubmit = async(e) => {
         e.preventDefault()
+        setLoading(true)
         const email = emailInputRef.current.value
         const password = passwordInputRef.current.value
         if (type==='register' ){
@@ -45,6 +48,7 @@ const AuthModal = ({type}) => {
                 }
                 const dbRef = collection(db, 'users')
                 await addDoc(dbRef, transferPackage)
+                setLoading(false)
                 router.push('/notebook')
             } catch (err){
                 setErrorMessage(err.message)
@@ -54,6 +58,7 @@ const AuthModal = ({type}) => {
             const auth = getAuth();
             try{
                 await signInWithEmailAndPassword(auth, email, password)
+                setLoading(false)
                 router.push((router.query.from && decodeURIComponent(router.query.from)) ?? '/notebook')
             } catch (err){
                 setErrorMessage(err.message)
@@ -61,10 +66,12 @@ const AuthModal = ({type}) => {
         }   
     }
     const handleGoogleSubmit = async(e) => {
+        setLoading(true)
         const auth = getAuth();
         const provider = new GoogleAuthProvider();
         try{
             await signInWithPopup(auth, provider);
+            setLoading(false)
             router.push((router.query.from && decodeURIComponent(router.query.from)) ?? '/notebook')
         }catch (e){
             console.log(e)
@@ -113,6 +120,11 @@ const AuthModal = ({type}) => {
                     </div>
                 </form>
             </div>
+            {
+                (loading)
+                    ? <MiniLoader/>
+                    : null
+            }
         </S.AuthModalContainer>
     );
 }
