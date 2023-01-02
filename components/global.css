@@ -35,7 +35,7 @@ span{
 
 /* Progress bar blur */
 #nprogress .peg {
-    display: none;
+    display: none !important;
 }
 
 @media all and (max-width: 5000px){
