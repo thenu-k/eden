@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MenuBarContainer = styled.div`
-    width: 85%;
+    width: 95%;
     max-width: 1500px;
     position: fixed;
     z-index: 99;
