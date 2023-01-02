@@ -89,8 +89,39 @@ export const HeaderContainer = styled.header`
             &.on .transparent{
                 opacity: 1;
             }
+            & nav{
+                width: 100%;
+                & ul{
+                    width: 100%;
+                    display: flex; flex-direction: column;
+                    align-items: center;
+
+                    & h1{
+                        margin: 50px 0 20px 0;
+                        width: 70%;
+                        display: flex; justify-content: flex-start;
+                        & a {
+                            padding: 00px 0px;
+                            border-radius: 5px;;
+                            font-size: 1.2em;
+                            font-weight: 700; letter-spacing: 1px;    
+                        }
+                    }
+                    & li{
+                        width: 70%;
+                        display: flex; justify-content: flex-start;
+                        border-bottom: 2px solid #d6d6d6;
+                        & a, & button{
+                            font-weight: 500;
+                            padding: 20px 0;
+                            font-size: 0.9em;
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
         }
-        & nav{
+        & nav.normal{
             display: none;
         }
         & .header.inner{

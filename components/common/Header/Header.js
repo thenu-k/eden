@@ -29,6 +29,7 @@ const Header = () => {
                 <nav className='normal'>
                     <ul>
                         <li><Link href='/notebook'>Notebook</Link></li>
+                        <li><Link href='https://github.com/thenu-k/eden'>Github</Link></li>
                         {
                             (user!=null)
                                 ?   <li><button onClick={logOut} className=''>Sign Out</button></li>
@@ -44,9 +45,11 @@ const Header = () => {
                 <div className="transparent" onClick={turnOffMenu}></div>
                 <div className="sideMenu inner box-shadow-01">
                     <div className="closeIcon"></div>
-                    <nav className='normal'>
+                    <nav className='sideNav'>
                         <ul>
+                            <h1 className=''><Link href='/' className=''>EDEN</Link></h1>
                             <li><Link href='/notebook'>Notebook</Link></li>
+                            <li><Link href='https://github.com/thenu-k/eden'>Github</Link></li>
                             {
                                 (user!=null)
                                     ?   <li><button onClick={logOut} className=''>Sign Out</button></li>
