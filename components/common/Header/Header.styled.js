@@ -37,6 +37,7 @@ export const HeaderContainer = styled.header`
                         padding: 0px 20px;
                         cursor: pointer;
                         background-color: unset;
+                        color: black;
                         &:hover{
                             background-color: #ececec;
                         }
@@ -116,6 +117,7 @@ export const HeaderContainer = styled.header`
                             padding: 20px 0;
                             font-size: 0.9em;
                             background-color: transparent;
+                            color: black;
                         }
                     }
                 }
