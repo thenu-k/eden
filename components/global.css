@@ -26,7 +26,8 @@ span{
     box-shadow: 0px 0px 3px #bababa;
 }
 .box-shadow-01{
-    box-shadow: 0px 0px 3px #929292;
+    /* box-shadow: 0px 0px 3px #929292; */
+    box-shadow: 0px 0px 5px #cdcdcd;
 }
 .box-shadow-02{
     box-shadow:0px 0px 5px #c9c9c9;
@@ -35,4 +36,10 @@ span{
 /* Progress bar blur */
 #nprogress .peg {
     display: none;
+}
+
+@media all and (max-width: 5000px){
+    .box-shadow-01{
+        box-shadow: 0px 0px 5px #cdcdcd;
+    }
 }
