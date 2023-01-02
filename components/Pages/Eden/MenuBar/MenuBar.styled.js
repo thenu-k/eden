@@ -36,7 +36,7 @@ export const MenuBarContainer = styled.div`
                 padding: 0 20px;
                 background: #1966FF;
                 color: white;
-                border-radius: 5px;
+                border-radius: 10px;
                 cursor: pointer;
             }
         }
@@ -84,7 +84,7 @@ export const MenuBarContainer = styled.div`
             width: 40%;
             background-color: white;
             min-width: 500px;
-            border-radius: 10px;
+            border-radius: 20px;
             transform: translateX(calc(-100%));
             display: flex; flex-direction: column; align-items: center;
             & .title{
@@ -116,8 +116,8 @@ export const MenuBarContainer = styled.div`
                 & button{
                     margin-top: 20px;
                     width: 20%;
-                    padding: 10px;
-                    border-radius: 5px;
+                    padding: 10px 10px;
+                    border-radius: 10px;
                     background: #1966FF;
                     color: white;
                     cursor: pointer;

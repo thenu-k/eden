@@ -70,7 +70,7 @@ export const AuthModalContainer = styled.div`
                     margin: 40px 0;
                     & button{
                         background: #1966FF;
-                        border-radius: 5px;
+                        border-radius: 10px;
                         color: white;
                         width: 100%;
                         padding: 20px 0px;
