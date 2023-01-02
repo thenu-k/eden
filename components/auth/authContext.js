@@ -26,7 +26,7 @@ export const AuthContextWrapper = ({children}) => {
             }
             // Delay Simulator
             setTimeout(()=>{
-                setLoading(false)
+                // setLoading(false)
             }, 1000)
         })
         return () => unsubscribe()

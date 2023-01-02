@@ -14,8 +14,12 @@ export const SplashScreenContainet = styled.div`
     }
 
     @media all and (max-width: 500px){
-        & h1{
+        /* & h1{
             transform: translateY(-50px);
-        }
+        } */
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        height: auto;
     }
 `
