@@ -7,6 +7,7 @@ export const NoteTemplateContainer = styled.div`
     align-self: flex-start;
     border-radius: 10px;
     height: 100%;
+    min-height: 150px;;
     align-items: flex-start;
     background-color: white;
     &:hover{
@@ -42,6 +43,7 @@ export const NoteTemplateContainer = styled.div`
     }
 
     @media all and (max-width: 600px){
+        min-height: 100px;
         & .inner.noteTemplate{
             & .com-1{
                 &:not(:last-of-type){
