@@ -9,7 +9,7 @@ import * as S from './Landing.styled'
 const Landing = () => {
     const auth = getAuth()
     const router = useRouter()
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
     const guestLogin = async() => {
         setLoading(true)
         try{
