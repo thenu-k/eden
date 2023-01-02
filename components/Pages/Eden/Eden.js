@@ -2,6 +2,7 @@ import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 import { useEffect, useState } from 'react';
 import { db } from '../../../firebase/firebase';
 import { useAuth } from '../../auth/authContext';
+import MiniLoader from '../../common/MiniLoader/MiniLoader';
 import * as S from './Eden.styled'
 import MenuBar from './MenuBar/MenuBar';
 import NoteTemplate from './NoteTemplate/NoteTemplate';
@@ -22,6 +23,7 @@ const Eden = () => {
         }
     ]
     const [data, setData] = useState(null)
+    const [loading, setLoading] = useState(true)
     const {user} = useAuth()
     const getData = async() => {
         const uid = user.uid
@@ -34,6 +36,7 @@ const Eden = () => {
                 description: doc.data().description,
             })) 
             setData(result)
+            setLoading(false)
         }catch(err){
             console.log(err)
         }
@@ -56,6 +59,11 @@ const Eden = () => {
                     }
                 </div>
             </div>
+            {
+                (loading)
+                    ? <MiniLoader/>
+                    : null
+            }
         </S.EdenContainer>
     );
 }

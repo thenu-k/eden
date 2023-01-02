@@ -1,6 +1,7 @@
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { useState } from 'react';
 import { guestDetails } from '../../../../firebase/firebase';
 import MiniLoader from '../../../common/MiniLoader/MiniLoader';
 import * as S from './Landing.styled'
@@ -8,13 +9,18 @@ import * as S from './Landing.styled'
 const Landing = () => {
     const auth = getAuth()
     const router = useRouter()
+    const [loading, setLoading] = useState(false)
     const guestLogin = async() => {
+        setLoading(true)
         try{
             await signInWithEmailAndPassword(auth, guestDetails.email, guestDetails.password)
             router.push('/notebook')
         } catch (err){
             console.log(err)
         }
+        setTimeout(()=> {
+            setLoading(false)
+        }, 1000)
     }
     return (
         <S.LandingContainer className='center' id='Landing'>
@@ -28,7 +34,11 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
-            <MiniLoader/>
+            {
+                (loading)
+                    ? <MiniLoader/>
+                    : null
+            }
         </S.LandingContainer>
     );
 }
