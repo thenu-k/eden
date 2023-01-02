@@ -2,13 +2,13 @@ import styled from "styled-components";
 
 export const MiniLoaderContainer = styled.div`
     position: fixed;
-    bottom: 40px;
-    height: 50px; width: 50px;
+    bottom: 5%; left: 5%;
+    height: 55px; width: 55px;
     border-radius: 5px;
     background-color: white;
     .loader {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             border: 4px solid #1966FF;;
             border-bottom-color: transparent;
             border-radius: 50%;
@@ -25,5 +25,9 @@ export const MiniLoaderContainer = styled.div`
         transform: rotate(360deg);
     }
     } 
+
+    /* @media all and (max-width: 600px){
+        left: 5%;
+    } */
 
 `
