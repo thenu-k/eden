@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const PermissionCheckContainer = styled.div`
     width: 100%;
+    margin-top: -60px;
+    position: fixed; z-index: 99;
+    height: auto;
+    top: 0; bottom: 0;
     & .inner{
         width: fit-content;
         font-weight: 500;
         font-size: 1.2em;
-        height: calc(100vh);
-        margin-top: -60px;
+        height: 100%;
         min-height: 500px;
         .loader {
             width: 48px;
