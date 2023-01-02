@@ -16,7 +16,7 @@ const RouteProtector = ({children}) => {
             // setTimeout(()=>{
             //     router.push(loginPath)
             // }, 1)
-            // router.push(loginPath)
+            router.push(loginPath)
         }
     }, [router, user])
     return (
