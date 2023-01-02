@@ -92,12 +92,13 @@ export const LandingContainer = styled.section`
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    width: 100%;;
+                    width: 90%;
+                    justify-content: space-evenly;
                     & .centerButtons{
                         width: 100px !important;
                         font-size: 0.8em;
                         &:first-of-type{
-                            margin-right: 10px !important;
+                            margin-right: 0px !important;
                         }
                         width: 60%;
                         padding: 15px 0;
