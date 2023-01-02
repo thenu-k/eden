@@ -46,4 +46,6 @@ export default function App({ Component, pageProps }) {
 
   Once the user pressed sign out, they were not able to  sign in using google again. 
   This bug was squashed after restarting the application after making the code changes
+
+  Reset complete
 */
