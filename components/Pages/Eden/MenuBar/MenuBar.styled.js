@@ -23,7 +23,7 @@ export const MenuBarContainer = styled.div`
                 border-radius: 10px;
                 -webkit-border-radius: 10px;
                 box-sizing: border-box;
-                outline: 2px solid #e2e2e2;
+                border: 2px solid #e2e2e2;
                 background-color: white;
                 &:focus{
                     outline: 2px solid #c8c8c8;
