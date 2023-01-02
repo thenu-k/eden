@@ -12,6 +12,7 @@ export const HeaderContainer = styled.header`
         width: 85%;
         height: 100%;
         display: flex; flex-direction: row; align-items: center;
+        & .menuIcon{display:none}
         & h1{
             height: 100%;
             & a{
@@ -61,9 +62,12 @@ export const HeaderContainer = styled.header`
             display: none;
         }
         & .header.inner{
-            justify-content: center;
+            justify-content: space-between;
             & h1 a{
                 padding: 0 10px;
+            }
+            & .menuIcon{
+                display: flex;
             }
         }
     }

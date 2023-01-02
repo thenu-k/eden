@@ -2,6 +2,7 @@ import * as S from './Header.styled'
 import Link from 'next/link';
 import {getAuth, signOut} from 'firebase/auth'
 import { useAuth } from '../../auth/authContext';
+import { FaBars } from "react-icons/fa";
 
 const Header = () => {
     const {user} = useAuth()
@@ -27,6 +28,9 @@ const Header = () => {
                         }
                     </ul>
                 </nav>
+                <div className="menuIcon">
+                    <FaBars color='black' size={22}/>
+                </div>
             </div>
         </S.HeaderContainer>
     );

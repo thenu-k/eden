@@ -69,11 +69,11 @@ const MenuBar = () => {
                         <input type="text" placeholder='Title' id='titleInput' autoComplete='off'/>
                         <input type="text" placeholder='Description' id='descInput' autoComplete='off'/>
                         <button className='center'>Submit</button>
-                        {
+                        {/* {
                             (error)
                                 ? <div className='error'>{error}</div>
                                 : null
-                        }
+                        } */}
                     </form>
                 </div>
             </div>
