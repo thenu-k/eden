@@ -69,7 +69,7 @@ export const HeaderContainer = styled.header`
             right: -100%;
             width: 100vw;
             height: auto; top: 0; bottom: 0;
-            transition: right 500ms ease-in-out;
+            transition: right 100ms ease-in-out;
             &.on{
                 right: 0;
             }
