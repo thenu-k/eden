@@ -69,9 +69,10 @@ export const HeaderContainer = styled.header`
             right: -100%;
             width: 100vw;
             height: auto; top: 0; bottom: 0;
-            transition: right 100ms ease-in-out;
+            transform: 0;
+            transition: transform 100ms ease-in-out;
             &.on{
-                right: 0;
+                transform: translateX(-100%);
             }
             display: flex; flex-direction: row; 
             & .sideMenu.inner{
@@ -84,7 +85,7 @@ export const HeaderContainer = styled.header`
                 flex-grow: 1;
                 opacity: 0;
                 backdrop-filter: blur(1px);
-                transition: opacity 100ms ease-in-out;
+                transition: opacity 200ms ease-in-out;
             }
             &.on .transparent{
                 opacity: 1;
