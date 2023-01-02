@@ -2,10 +2,11 @@ import styled from "styled-components";
 
 export const MiniLoaderContainer = styled.div`
     position: fixed;
-    bottom: 5%; left: 5%;
+    bottom: 0px; left: 0px;
     height: 55px; width: 55px;
     border-radius: 5px;
     background-color: white;
+    z-index: 999;
     .loader {
             width: 40px;
             height: 40px;
