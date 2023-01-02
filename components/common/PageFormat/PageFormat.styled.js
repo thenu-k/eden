@@ -5,7 +5,7 @@ export const PageFormatContainer = styled.div`
     min-height: calc(100vh - 60px);
     background-color: #F8F9FF;
     & #Header{
-        position: fixed; top: 0; left: 0; z-index: 9999;
+        position: fixed; top: 0; left: 0; z-index: 9000;
     }
     & .pageFormatInner {
         margin-top: 60px;

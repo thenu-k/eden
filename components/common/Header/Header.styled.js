@@ -23,7 +23,7 @@ export const HeaderContainer = styled.header`
                 letter-spacing: 1px;
             }
         }
-        & nav{
+        & nav.normal{
             height: 100%;
             margin-left: auto;
             & ul{
@@ -56,8 +56,48 @@ export const HeaderContainer = styled.header`
                 }
             }
         }
+
+    }
+    &> .sideMenu{
+        display: none;
     }
     @media all and (max-width: 600px){
+        &> .sideMenu{
+            display: none;
+            position: fixed;
+            z-index: 9998;
+            width: 100vw;
+            height: auto; top: 0; bottom: 0; left: 0;
+            &.on{
+                display: flex;
+            }
+            transition: all 500ms ease-in-out;
+            flex-direction: row; 
+            & .sideMenu.inner{
+                transition: right 500ms ease-in-out;
+                position: relative;
+                z-index: 9999;
+                background-color: white;
+                top: 0; right: -100%;
+                width: 250px;
+                height: 100%;
+            }
+            &.on .sideMenu.inner{
+                transition: right 500ms ease-in-out;
+                right: 0;
+            }
+            & .transparent{
+                opacity: 0;
+                height: 100%;
+                flex-grow: 1;
+                backdrop-filter: blur(1px);
+                transition: all 500ms ease-in-out;
+            }
+            &.on .transparent{
+                display: flex;
+                opacity: 1;
+            }
+        }
         & nav{
             display: none;
         }
@@ -68,6 +108,7 @@ export const HeaderContainer = styled.header`
             }
             & .menuIcon{
                 display: flex;
+                cursor: pointer;
             }
         }
     }
