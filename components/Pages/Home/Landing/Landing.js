@@ -2,6 +2,7 @@ import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { guestDetails } from '../../../../firebase/firebase';
+import MiniLoader from '../../../common/MiniLoader/MiniLoader';
 import * as S from './Landing.styled'
 
 const Landing = () => {
@@ -27,6 +28,7 @@ const Landing = () => {
                     </div>
                 </div>
             </div>
+            <MiniLoader/>
         </S.LandingContainer>
     );
 }
