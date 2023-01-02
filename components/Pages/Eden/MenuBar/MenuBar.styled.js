@@ -20,13 +20,13 @@ export const MenuBarContainer = styled.div`
                 height: 40px;
                 width: 300px;
                 padding: 0 20px ;
-                border-radius: 10px;
-                -webkit-border-radius: 10px;
+                border-radius: 5px;
+                -webkit-border-radius: 5px;
                 box-sizing: border-box;
-                border: 2px solid #e2e2e2;
+                border: 2px solid #d2d2d2;
                 background-color: white;
                 &:focus{
-                    outline: 2px solid #c8c8c8;
+                    outline: none;
                 }
             }
         }
@@ -175,5 +175,11 @@ export const MenuBarContainer = styled.div`
                 }
             }
         }
+    }
+    @media all and (max-width: 500px){
+        width: 100%;
+        position: relative;
+        top: unset; left: unset;
+        margin-bottom: 20px;
     }
 `

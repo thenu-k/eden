@@ -40,6 +40,7 @@ export const EdenContainer = styled.div`
     }
     @media all and (max-width: 500px){
         & .eden.inner{
+            margin-top: 20px;
             & .noteList{
                 grid-template-columns: repeat(1, 1fr);
             }
