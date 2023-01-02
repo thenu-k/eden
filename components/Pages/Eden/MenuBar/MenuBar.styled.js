@@ -18,7 +18,7 @@ export const MenuBarContainer = styled.div`
             margin: 20px 0;
             & input{
                 height: 40px;
-                width: 30vw;
+                width: 300px;
                 padding: 0 20px ;
                 border-radius: 10px;
                 -webkit-border-radius: 10px;
@@ -34,13 +34,13 @@ export const MenuBarContainer = styled.div`
             margin-left: auto;
             & button{
                 height: 40px;
-                padding: 0 20px;
+                width: 40px;
                 background: linear-gradient(45deg,purple,blue);
                 &:hover{
                     opacity: 0.8;
                 }
                 color: white;
-                border-radius: 10px;
+                border-radius: 99999px;
                 cursor: pointer;
             }
         }
@@ -88,12 +88,12 @@ export const MenuBarContainer = styled.div`
             width: 40%;
             background-color: white;
             min-width: 500px;
-            border-radius: 20px;
+            border-radius: 10px;
             transform: translateX(calc(-100%));
             display: flex; flex-direction: column; align-items: center;
             & .title{
-                margin: 40px 0;
-                width: 90%;
+                margin: 60px 0 40px;
+                width: 80%;
                 display: flex;
                 align-items: center;
                 & .icon{
@@ -105,8 +105,8 @@ export const MenuBarContainer = styled.div`
                 }
             }
             & form{
-                margin-bottom: 40px;
-                width: 90%;
+                margin-bottom: 60px;
+                width: 80%;
                 display: flex; flex-direction: column;
                 & input{
                     width: 100%;
@@ -133,28 +133,27 @@ export const MenuBarContainer = styled.div`
 
     @media all and (max-width: 600px){
         & .inner.menubar{
-            height: 130px;
+            height: 80px;
             width: 90%;
-            flex-direction: column;
-            justify-content: center;
+            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
             & .search.outer{
-                width: 100%;;
+                width: 80%;;
                 & input{
                     width: 100%;;
-                    text-align: center;
+                    text-align: left;
                 }
                 margin-top: 0;
-                margin-bottom: 15px;
+                margin-bottom: 0px;
             }
             & .controls.outer{
-                width: 100%;
+                width: auto;
                 margin-left: unset;
                 margin-bottom: 0px;
                 & button{
-                    width: 100%;
-                    font-size: 0.9em;
-                    height: 50px;
+                    height: 40px;
+                    width: 40px;
                 }
             }
         }

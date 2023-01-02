@@ -34,7 +34,7 @@ export const EdenContainer = styled.div`
     }
     @media all and (max-width: 600px){
         & .eden.inner{
-            margin-top: 170px;
+            margin-top: 120px;
         }
     }
     @media all and (max-width: 500px){

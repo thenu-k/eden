@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import * as S from './MenuBar.styled'
 import { BsPlusSquareFill } from "react-icons/bs";
+import { FaPlus } from "react-icons/fa";
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../../../firebase/firebase';
 import { useAuth } from '../../../auth/authContext';
@@ -50,10 +51,10 @@ const MenuBar = () => {
         <S.MenuBarContainer className='center box-shadow-01' id='MenuBar'>
             <div className="menubar inner">
                 <div className="search outer">
-                    <input type="text" placeholder='Search Inventory' className='' />
+                    <input type="text" placeholder='Search' className='' />
                 </div>
                 <div className="controls outer">
-                    <button type='button' onClick={turnModalOn}>Create</button>
+                    <button type='button' onClick={turnModalOn} className='center'><FaPlus color='white'/></button>
                 </div>
             </div>
             <div id="createModal" className='center' ref={modalRef} onClick={handleModalClick}>
