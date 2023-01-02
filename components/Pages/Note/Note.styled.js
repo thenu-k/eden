@@ -164,19 +164,29 @@ export const NoteContainer = styled.div`
         & .inner.note{
             width: 90%;
             & .editorBar{
-                width: 90%;
+                position: relative;
+                top: unset; left: unset;
+                margin: 20px 0;;
+                width: 100%;
                 & .inner.editorbar{
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 0 20px;
+                    height: 60px;
                     & button{
-                        margin: 0 !important;
+                        margin-right: 10px !important;
                         &.save{
                             margin-left: unset;
                         }
                     }
-                    & .controls{
+                    /* & .controls{
                         width: 100%;
                         display: flex; justify-content: space-evenly;
-                    }
+                    } */
                 }
+            }
+            & .textEditor{
+                margin: 0;
             }
         }
         & .ProseMirror{
