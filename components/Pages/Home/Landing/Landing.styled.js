@@ -96,7 +96,9 @@ export const LandingContainer = styled.section`
                     & .centerButtons{
                         width: 100px !important;
                         font-size: 0.8em;
-                        margin-right: 10px !important;
+                        &:first-of-type{
+                            margin-right: 10px !important;
+                        }
                         width: 60%;
                         padding: 15px 0;
                         font-weight: 500;
