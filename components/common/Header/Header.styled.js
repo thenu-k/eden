@@ -66,13 +66,12 @@ export const HeaderContainer = styled.header`
             display: flex;
             position: fixed;
             z-index: 9999;
-            right: 0;
+            right: -100%;
             width: 100vw;
             height: auto; top: 0; bottom: 0;
-            transform: translateX(100%);
-            transition: transform 100ms ease-in-out;
+            transition: right 200ms ease-in-out;
             &.on{
-                transform: translateX(0);
+                right: 0;
             }
             display: flex; flex-direction: row; 
             & .sideMenu.inner{
@@ -85,7 +84,7 @@ export const HeaderContainer = styled.header`
                 flex-grow: 1;
                 opacity: 0;
                 backdrop-filter: blur(1px);
-                transition: opacity 200ms ease-in-out;
+                transition: opacity 100ms ease-in-out;
             }
             &.on .transparent{
                 opacity: 1;
