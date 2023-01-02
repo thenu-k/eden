@@ -119,12 +119,12 @@ export const MenuBarContainer = styled.div`
                 & button{
                     margin-top: 20px;
                     width: 20%;
-                    padding: 10px 10px;
+                    padding: 15px 10px;
                     border-radius: 10px;
                     background: linear-gradient(45deg,purple,blue);;
                     color: white;
                     cursor: pointer;
-                    font-size: 1.1em;
+                    font-size: 1em;
                 }
             }
         }
@@ -153,6 +153,24 @@ export const MenuBarContainer = styled.div`
                 & button{
                     width: 100%;
                     font-size: 0.9em;
+                    height: 50px;
+                }
+            }
+        }
+        & #createModal{
+            & .inner{
+                width: 85%;
+                min-width: 0%;;
+                & .title{
+                    width: 80%;
+                }
+                & form{
+                    width: 80%;
+                }
+                & form button{
+                    width: 100%;
+                    font-size: 1em;
+                    height: 60px;
                 }
             }
         }
