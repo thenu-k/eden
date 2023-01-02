@@ -132,7 +132,7 @@ export const MenuBarContainer = styled.div`
     }
 
     @media all and (max-width: 600px){
-        width: 95%;
+        width: 90%;
         & .inner.menubar{
             height: 80px;
             width: 90%;

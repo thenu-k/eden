@@ -162,9 +162,9 @@ export const NoteContainer = styled.div`
 
     @media all and (max-width: 500px){
         & .inner.note{
-            width: 95%;
+            width: 90%;
             & .editorBar{
-                width: 95%;
+                width: 90%;
                 & .inner.editorbar{
                     & button{
                         margin: 0 !important;
